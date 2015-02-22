@@ -1,0 +1,55 @@
+# Reading C:/altera/14.1/modelsim_ase/tcl/vsim/pref.tcl
+# do adder2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3c Lib Mapping Utility 2014.09 Sep 20 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/ece385/2Bit_Adder {C:/ece385/2Bit_Adder/full_adder.sv}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 19:38:55 on Feb 11,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/ece385/2Bit_Adder" C:/ece385/2Bit_Adder/full_adder.sv 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 19:38:55 on Feb 11,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/ece385/2Bit_Adder {C:/ece385/2Bit_Adder/adder2.sv}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 19:38:55 on Feb 11,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/ece385/2Bit_Adder" C:/ece385/2Bit_Adder/adder2.sv 
+# -- Compiling module adder2
+# 
+# Top level modules:
+# 	adder2
+# End time: 19:38:56 on Feb 11,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vsim work.adder2
+# vsim -gui "+altera" -l msim_transcript -do "adder2_run_msim_rtl_verilog.do" 
+# Start time: 19:40:02 on Feb 11,2015
+# Loading sv_std.std
+# Loading work.adder2
+# Loading work.full_adder
+add wave -position insertpoint  \
+sim:/adder2/A
+add wave -position insertpoint  \
+sim:/adder2/B
+add wave -position insertpoint  \
+sim:/adder2/cin
+add wave -position insertpoint  \
+sim:/adder2/cin
+wave create -driver freeze -pattern constant -value zz -range 1 0 -starttime 0ps -endtime 1000ps sim:/adder2/A
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver freeze -pattern constant -value zz -range 1 0 -starttime 0ps -endtime 1000ps sim:/adder2/B
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns sim:/adder2/cin
+# End time: 23:04:02 on Feb 11,2015, Elapsed time: 3:24:00
+# Errors: 0, Warnings: 0

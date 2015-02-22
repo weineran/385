@@ -1,0 +1,204 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/simulation/modelsim
+vcompute
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1424321446
+!i10b 1
+!s100 JBQ@j7DDg2OcB=^Wi;<@o3
+IF8U`a1SSE^L?WY[4mQa8N2
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 compute_sv_unit
+S1
+R0
+Z4 w1423708793
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/compute.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/compute.sv
+L0 1
+Z5 OV;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1424321446.908000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/compute.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/compute.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work {+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor}
+vcontrol
+R1
+R2
+!i10b 1
+!s100 WUB9UTZZ3TTczMaD;bnUo2
+I9_Y>8[4X[Nb8QHL[I6=0z1
+R3
+!s105 Control_sv_unit
+S1
+R0
+R4
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Control.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Control.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1424321446.544000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Control.sv|
+!i113 1
+R6
+R7
+vHexDriver
+R1
+R2
+!i10b 1
+!s100 aRJgNbH8ER_E]Y]fbToTV0
+IEBViGSkMoSgem]_Rn?MYZ2
+R3
+!s105 HexDriver_sv_unit
+S1
+R0
+R4
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/HexDriver.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/HexDriver.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1424321446.185000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/HexDriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/HexDriver.sv|
+!i113 1
+R6
+R7
+n@hex@driver
+vProcessor
+R1
+Z8 !s110 1424321448
+!i10b 1
+!s100 `Uh=E8RL@BM2UTLLzQbm]3
+IST3WMje=3_[2;hdgGK9UK2
+R3
+!s105 Processor_sv_unit
+S1
+R0
+R4
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Processor.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Processor.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1424321448.459000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Processor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Processor.sv|
+!i113 1
+R6
+R7
+n@processor
+vreg_8
+R1
+Z9 !s110 1424321445
+!i10b 1
+!s100 701=:jKB;8`H]zUThEbIe1
+I3oc9l4]_jlFi<?[OERje02
+R3
+!s105 Reg_8_sv_unit
+S1
+R0
+R4
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Reg_8.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Reg_8.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1424321445.842000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Reg_8.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Reg_8.sv|
+!i113 1
+R6
+R7
+vregister_unit
+R1
+R8
+!i10b 1
+!s100 BWRY2oI[NUNeNDJYf2EoB3
+IV2XlD2MGME=gfYOGcB_Lc1
+R3
+!s105 Register_unit_sv_unit
+S1
+R0
+R4
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Register_unit.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Register_unit.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1424321448.077000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Register_unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Register_unit.sv|
+!i113 1
+R6
+R7
+vrouter
+R1
+R9
+!i10b 1
+!s100 ?0ZGSYPodC0HQ:KhmfOJz0
+IOYfVJ3164cQb:MGSl?lP]0
+R3
+!s105 Router_sv_unit
+S1
+R0
+R4
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Router.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Router.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1424321445.356000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Router.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Router.sv|
+!i113 1
+R6
+R7
+vtestbench
+R1
+R8
+!i10b 1
+!s100 U=Y6o>f8GOIWGdjIbG`eh1
+IkX6BGPMISfIX<aciEaE862
+R3
+!s105 testbench_sv_unit
+S1
+R0
+R4
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/testbench.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/testbench.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1424321448.821000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/testbench.sv|
+!i113 1
+R6
+R7

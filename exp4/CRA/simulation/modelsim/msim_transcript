@@ -1,0 +1,98 @@
+# Reading C:/altera/14.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Bit-Serial_Logic_Processor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3c Lib Mapping Utility 2014.09 Sep 20 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/Andrew/Documents/Box\ Sync/UIUC/ECE385\ Digital\ Systems\ Lab/Experiment_4/CRA {C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/control.sv}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 10:09:04 on Feb 12,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA" C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/control.sv 
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# End time: 10:09:04 on Feb 12,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Andrew/Documents/Box\ Sync/UIUC/ECE385\ Digital\ Systems\ Lab/Experiment_4/CRA {C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/Reg_17.sv}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 10:09:04 on Feb 12,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA" C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/Reg_17.sv 
+# -- Compiling module reg_17
+# 
+# Top level modules:
+# 	reg_17
+# End time: 10:09:04 on Feb 12,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Andrew/Documents/Box\ Sync/UIUC/ECE385\ Digital\ Systems\ Lab/Experiment_4/CRA {C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/HexDriver.sv}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 10:09:05 on Feb 12,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA" C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 10:09:05 on Feb 12,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Andrew/Documents/Box\ Sync/UIUC/ECE385\ Digital\ Systems\ Lab/Experiment_4/CRA {C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/full_adder.sv}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 10:09:05 on Feb 12,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA" C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/full_adder.sv 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 10:09:05 on Feb 12,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Andrew/Documents/Box\ Sync/UIUC/ECE385\ Digital\ Systems\ Lab/Experiment_4/CRA {C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/adder16.sv}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 10:09:05 on Feb 12,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA" C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/adder16.sv 
+# -- Compiling module adder16
+# 
+# Top level modules:
+# 	adder16
+# End time: 10:09:05 on Feb 12,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Andrew/Documents/Box\ Sync/UIUC/ECE385\ Digital\ Systems\ Lab/Experiment_4/CRA {C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/cra_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 10:09:05 on Feb 12,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA" C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/cra_datapath.sv 
+# -- Compiling module cra_datapath
+# 
+# Top level modules:
+# 	cra_datapath
+# End time: 10:09:05 on Feb 12,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Andrew/Documents/Box\ Sync/UIUC/ECE385\ Digital\ Systems\ Lab/Experiment_4/CRA {C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/testbench.sv}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 10:09:06 on Feb 12,2015
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA" C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:09:06 on Feb 12,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench_cra
+# vsim -gui "+altera" -l msim_transcript -do "Bit-Serial_Logic_Processor_run_msim_rtl_verilog.do" 
+# Start time: 10:09:06 on Feb 12,2015
+# ** Error: (vsim-3170) Could not find 'C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/simulation/modelsim/rtl_work.testbench_cra'.
+# 
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./Bit-Serial_Logic_Processor_run_msim_rtl_verilog.do PAUSED at line 17
+quit
+# End time: 10:59:06 on Feb 12,2015, Elapsed time: 0:50:00
+# Errors: 1, Warnings: 0

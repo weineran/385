@@ -1,0 +1,8 @@
+
+State Machine - |cra_datapath|control:control_unit|curr_state
+Name curr_state.s_compute curr_state.s_run curr_state.s_load curr_state.s_start curr_state.s_reset 
+curr_state.s_start 0 0 0 0 0 
+curr_state.s_load 0 0 1 1 0 
+curr_state.s_run 0 1 0 1 0 
+curr_state.s_compute 1 0 0 1 0 
+curr_state.s_reset 0 0 0 1 1 

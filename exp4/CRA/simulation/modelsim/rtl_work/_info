@@ -1,0 +1,179 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/simulation/modelsim
+vadder16
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 !s110 1423757345
+!i10b 1
+!s100 miaQlK2`dN9Pb`IeHIdIa0
+IPi^8PcXZ@e<?zHcjFL92f0
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 adder16_sv_unit
+S1
+R0
+w1423724729
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/adder16.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/adder16.sv
+L0 1
+Z4 OV;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1423757345.586000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/adder16.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/adder16.sv|
+!i113 1
+Z5 o-sv -work work
+Z6 !s92 -sv -work work {+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA}
+vcontrol
+R1
+Z7 !s110 1423757344
+!i10b 1
+!s100 a<6ZNXZ3BKLeL[2]i;jRJ1
+I3[`9<T=Bc=3<DB?Gk=ji:3
+R3
+!s105 control_sv_unit
+S1
+R0
+w1423755047
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/control.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/control.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1423757344.631000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/control.sv|
+!i113 1
+R5
+R6
+vcra_datapath
+R1
+R2
+!i10b 1
+!s100 0?ah7m5[G6fR`8<kHbPm<1
+Id3H8LSZeOOZBjbXf_;XCd0
+R3
+!s105 cra_datapath_sv_unit
+S1
+R0
+w1423756725
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/cra_datapath.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/cra_datapath.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1423757345.881000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/cra_datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/cra_datapath.sv|
+!i113 1
+R5
+R6
+vfull_adder
+R1
+R2
+!i10b 1
+!s100 hEm?Mz;VPk:^1`6_Lafzf3
+IIeCX<P0f25>[X1NoTT?i<3
+R3
+!s105 full_adder_sv_unit
+S1
+R0
+w1423704673
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/full_adder.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/full_adder.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1423757345.303000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/full_adder.sv|
+!i113 1
+R5
+R6
+vHexDriver
+R1
+R2
+!i10b 1
+!s100 aRJgNbH8ER_E]Y]fbToTV0
+IC3g@G3X;^Q0bSQNN@9Wi11
+R3
+!s105 HexDriver_sv_unit
+S1
+R0
+w1423724726
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/HexDriver.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/HexDriver.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1423757345.103000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/HexDriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/HexDriver.sv|
+!i113 1
+R5
+R6
+n@hex@driver
+vreg_17
+R1
+R7
+!i10b 1
+!s100 n`mRnM=l=:gzfHZ[:[zlX1
+I4Le@k69ffh^NmG3m=ilUC1
+R3
+!s105 Reg_17_sv_unit
+S1
+R0
+w1423724728
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/Reg_17.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/Reg_17.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1423757344.872000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/Reg_17.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/Reg_17.sv|
+!i113 1
+R5
+R6
+vtestbench
+R1
+!s110 1423757346
+!i10b 1
+!s100 PQU2QRSh=jnz0N@=RbY;?1
+I]4m0?e>N20W0UC`<1S_Q:2
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1423756945
+8C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/testbench.sv
+FC:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/testbench.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1423757346.116000
+!s107 C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA|C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/testbench.sv|
+!i113 1
+R5
+R6

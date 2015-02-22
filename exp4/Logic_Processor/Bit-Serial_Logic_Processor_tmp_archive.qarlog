@@ -1,0 +1,28 @@
+Quartus II Archive log --	C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Bit-Serial_Logic_Processor_tmp_archive.qarlog
+
+Archive:	C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Bit-Serial_Logic_Processor_tmp_archive.qar
+Date:		Wed Feb 11 23:02:14 2015
+Quartus II 64-Bit		14.1.0 Build 186 12/03/2014 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Bit-Serial_Logic_Processor.qpf
+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Bit-Serial_Logic_Processor.qsf
+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Control.sv
+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/HexDriver.sv
+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Processor.sv
+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Reg_8.sv
+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Register_unit.sv
+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Router.sv
+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/compute.sv
+C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/testbench.sv
+c:/altera/14.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 11 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Wed Feb 11 23:02:17 2015
+Source archive file:	C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/Logic_Processor/Bit-Serial_Logic_Processor_tmp_archive.qar
+Archive was extracted into	C:/Users/Andrew/Documents/Box Sync/UIUC/ECE385 Digital Systems Lab/Experiment_4/CRA/
+		 - successfully.

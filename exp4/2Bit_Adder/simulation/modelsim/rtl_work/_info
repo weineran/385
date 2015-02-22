@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/ece385/2Bit_Adder/simulation/modelsim
+vadder2
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+!s110 1423705136
+!i10b 1
+!s100 PVoOj<0a:;B>oiQZU3UZB0
+IKWijK_iaSFHXd3F`QcLB[2
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+!s105 adder2_sv_unit
+S1
+R0
+w1423704897
+8C:/ece385/2Bit_Adder/adder2.sv
+FC:/ece385/2Bit_Adder/adder2.sv
+L0 1
+Z3 OV;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1423705135.965000
+!s107 C:/ece385/2Bit_Adder/adder2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ece385/2Bit_Adder|C:/ece385/2Bit_Adder/adder2.sv|
+!i113 1
+Z4 o-sv -work work
+Z5 !s92 -sv -work work +incdir+C:/ece385/2Bit_Adder
+vfull_adder
+R1
+!s110 1423705135
+!i10b 1
+!s100 hEm?Mz;VPk:^1`6_Lafzf3
+IiYKS=Z?i?Qmcl?dNeMbfR0
+R2
+!s105 full_adder_sv_unit
+S1
+R0
+w1423704673
+8C:/ece385/2Bit_Adder/full_adder.sv
+FC:/ece385/2Bit_Adder/full_adder.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1423705135.787000
+!s107 C:/ece385/2Bit_Adder/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ece385/2Bit_Adder|C:/ece385/2Bit_Adder/full_adder.sv|
+!i113 1
+R4
+R5
