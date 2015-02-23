@@ -22,5 +22,3 @@ full_adder FA5(.x(A[5]), .y(BB[5]), .z(c4), .s(S[5]), .c(c5));
 full_adder FA6(.x(A[6]), .y(BB[6]), .z(c5), .s(S[6]), .c(c6));
 full_adder FA7(.x(A[7]), .y(BB[7]), .z(c6), .s(S[7]), .c(c7));
 full_adder FA8(.x(A8), .y(BB8), .z(c7), .s(S[8]), .c());
-
-endmodule

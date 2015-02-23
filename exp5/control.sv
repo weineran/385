@@ -1,28 +1,27 @@
 module control
 (
-	input logic Clk, Reset, Run, ClearA_LoadB, M;
-	input logic [7:0] S,
+	input logic Clk, Reset, Run, ClearA_LoadB, M,
 	output logic [6:0] AhexU, AhexL, BhexU,
 	output logic [7:0] Aval, Bval,
 	output logic X,
-	output Clr_Ld, Shift, Add, Sub
-)
+	output Clr_ld, Shift, Add, Sub
+);
 
-enum logic [4:0] {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P} curr_state, next_state;
+enum logic [4:0] {A,B,C,D,E,F,G,H,I,J,K,L,M1,N,O,P} curr_state, next_state;
 always_ff @ (posedge Clk or posedge Reset )
 	begin
 		if (Reset) 				// Asynchronous Reset - see note in Reg_4
 			curr_state = A; 	// A is the reset/start state
 		else
 			curr_state = next_state;
+	end
 	
-
 always_comb
 begin
 
 	next_state = curr_state;
 	unique case (curr_state)
-		A : if (Execute)
+		A : if (Run)
 			next_state = B;
 		B : next_state = C;
 		C : next_state = D;
@@ -32,15 +31,14 @@ begin
 		H : next_state = I;
 		I : next_state = J;
       K : next_state = L;
-      L : next_state = M;
-      M : next_state = N;
+      L : next_state = M1;
+      M1 : next_state = N;
       N : next_state = O;
       O : next_state = P;
-      P : if(~Execute)
+      P : if(~Run)
           next_state = A;       		
-				
-	case
-	
+	endcase		
+end	
 
 always_comb
 begin
@@ -50,11 +48,10 @@ begin
 				Sub = 1'b0;
 				Shift = 1'b0;
 				if(ClearA_LoadB)
-					Clr_Ld = 1'b1;  
+					Clr_ld = 1'b1;  
 				else
 					Clr_ld = 1'b0;
 				end
-
 
         //1 
 		  B: 	begin
@@ -62,9 +59,10 @@ begin
 					Add = 1'b1;
 				else
 					Add = 1'b0; 
-					Sub = 1'b0;
-					Clr_ld = 1'b0;
-					Shift = 1'b0;
+				Sub = 1'b0;
+				Clr_ld = 1'b0;
+				Shift = 1'b0;
+				end
 					
 		  // first shift
 		  C:  begin
@@ -72,6 +70,7 @@ begin
 				Add = 1'b0;
 				Sub = 1'b0;
 				Clr_ld = 1'b0;
+				end
 					
 		
         //2
@@ -80,9 +79,10 @@ begin
 					Add = 1'b1;
 				else
 					Add = 1'b0;
-					Sub = 1'b0;
-					Clr_ld = 1'b0;
-					Shift = 1'b0;
+				Sub = 1'b0;
+				Clr_ld = 1'b0;
+				Shift = 1'b0;
+				end
 					
 		  // second shift
 		  E:  begin
@@ -90,6 +90,7 @@ begin
 			   Add = 1'b0;
 			   Sub = 1'b0;
 			   Clr_ld = 1'b0;
+				end
 					
 
 	     //3
@@ -98,9 +99,10 @@ begin
 					Add = 1'b1;
 			   else
 					Add = 1'b0;
-               Sub = 1'b0;
-               Clr_ld = 1'b0;
-               Shift = 1'b0;    
+            Sub = 1'b0;
+            Clr_ld = 1'b0;
+            Shift = 1'b0; 
+				end
 					
         // third shift
         G:  begin
@@ -108,6 +110,7 @@ begin
             Add = 1'b0;
             Sub = 1'b0;
             Clr_ld = 1'b0;
+				end
 					
 
         //4
@@ -117,9 +120,10 @@ begin
 					
             else
                 Add = 1'b0;
-                Sub = 1'b0;
-                Clr_ld = 1'b0;
-                Shift = 1'b0;    
+            Sub = 1'b0;
+            Clr_ld = 1'b0;
+            Shift = 1'b0;  
+				end
 					
         // fourth shift
         I:  begin
@@ -127,6 +131,7 @@ begin
             Add = 1'b0;
             Sub = 1'b0;
             Clr_ld = 1'b0;
+				end
 					
         
         //5
@@ -136,9 +141,10 @@ begin
 					
             else
                 Add = 1'b0;
-                Sub = 1'b0;
-                Clr_ld = 1'b0;
-                Shift = 1'b0;    
+            Sub = 1'b0;
+            Clr_ld = 1'b0;
+            Shift = 1'b0; 
+				end
 					
         // fifth shift
         I:  begin
@@ -146,6 +152,7 @@ begin
             Add = 1'b0;
             Sub = 1'b0;
             Clr_ld = 1'b0;
+				end
 					
 
          //6
@@ -155,9 +162,10 @@ begin
 					
             else
                 Add = 1'b0;
-                Sub = 1'b0;
-                Clr_ld = 1'b0;end
-                Shift = 1'b0;    
+            Sub = 1'b0;
+            Clr_ld = 1'b0;
+            Shift = 1'b0;
+				end
 					
         // sixth shift
         K:  begin
@@ -165,6 +173,7 @@ begin
             Add = 1'b0;
             Sub = 1'b0;
             Clr_ld = 1'b0;
+				end
 					
 
         //7
@@ -173,16 +182,18 @@ begin
                 Add = 1'b1;
             else
                 Add = 1'b0;
-                Sub = 1'b0;
-                Clr_ld = 1'b0;
-                Shift = 1'b0;    
+            Sub = 1'b0;
+            Clr_ld = 1'b0;
+            Shift = 1'b0;
+				end
 					
         // seventh shift
-        M:  begin
+        M1:  begin
             Shift = 1'b1;
             Add = 1'b0;
             Sub = 1'b0;
             Clr_ld = 1'b0;
+				end
 					
         
         //Subtract if necessary
@@ -190,10 +201,11 @@ begin
             if(M)
                 Sub = 1'b1;
             else
-                Sub = 0'b0;
-                Add = 1'b0;
-                Shift = 1'b1;
-                Clr_ld = 1'b0;
+                Sub = 1'b0;
+            Add = 1'b0;
+            Shift = 1'b1;
+            Clr_ld = 1'b0;
+				end
 					
         // Last shift
         O:  begin
@@ -201,7 +213,7 @@ begin
             Sub = 1'b0;
             Shift = 1'b1;
             Clr_ld = 1'b0;
-					
+				end	
 
         // clear
         P:  begin
@@ -209,11 +221,11 @@ begin
             Sub = 1'b0;
             Shift = 1'b0;
             Clr_ld = 1'b0;
-					
-			case
-
-	
-	module
+				end
+				
+		 endcase
+		 end
+endmodule
 
 
 

@@ -4,7 +4,7 @@ module DFF
 	output logic Q
 );
 
-always @ (posedge Clk or posedge Reset)
+always @ (posedge Clk or poseedge Reset)
 begin
 	Q <= Q;
 	if(Reset)
