@@ -8,7 +8,7 @@ module control
 	output Clr_Ld, Shift, Add, Sub
 )
 
-enum logic [3:0] {A,B,C,D,E,F,G,H,I,J} curr_state, next_state;
+enum logic [4:0] {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P} curr_state, next_state;
 always_ff @ (posedge Clk or posedge Reset )
 	begin
 		if (Reset) 				// Asynchronous Reset - see note in Reg_4
@@ -30,10 +30,15 @@ begin
 		E : next_state = F;
 		F : next_state = G;
 		H : next_state = I;
-		I : next_state = J;		
+		I : next_state = J;
+        K : next_state = L;
+        L : next_state = M;
+        M : next_state = N;
+        N : next_state = O;
+        O : next_state = P;
+        P : if(~Execute)
+            next_state = A;       		
 				
-		J : if (~Execute)
-			next_state = A;
 endcase
 end
 
