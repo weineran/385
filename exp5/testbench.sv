@@ -7,20 +7,14 @@ timeprecision 1ns;
 // These signals are internal because the processor will be 
 // instantiated as a submodule in testbench.
 logic Clk = 0;
-logic Reset, LoadA, LoadB, Execute;
-logic [7:0] Din;
-logic [2:0] F;
-logic [1:0] R;
-logic [3:0] LED;
-logic [7:0] Aval,
-		 Bval;
-logic [6:0] AhexL,
-		 AhexU,
-		 BhexL,
-		 BhexU; 
+logic Reset;
+logic Run;
+logic CLR_LDB;
+logic Reset2;
+logic [7:0] Switches; 
 
 // To store expected results
-logic [7:0] ans_1a, ans_2b;
+logic [7:0] A, B;
 				
 // A counter to count the instances where simulation results
 // do no match with expected results
@@ -28,7 +22,8 @@ integer ErrorCnt = 0;
 		
 // Instantiating the DUT
 // Make sure the module and signal names match with those in your design
-Processor processor0(.*);	
+\8bitmult processor0(.*);
+	
 
 // Toggle the clock
 // #1 means wait for a delay of 1 timeunit
@@ -46,12 +41,8 @@ end
 // as in a software program
 initial begin: TEST_VECTORS
 Reset = 0;		// Toggle Rest
-LoadA = 1;
-LoadB = 1;
-Execute = 1;
-Din = 8'h33;	// Specify Din, F, and R
-F = 3'b010;
-R = 2'b10;
+Switches = 8'h33;	// Specify Din, F, and R
+
 
 #2 Reset = 1;
 
