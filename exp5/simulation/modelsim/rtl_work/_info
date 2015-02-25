@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/zachrice/385/385/exp5/simulation/modelsim
+vADD_SUB9
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+I@=mF3ik0NzM8:=]ZzAGPm3
+VaD1O=bW1GV@o1YUNUSkK_0
+S1
+Z2 d/home/zachrice/385/385/exp5/simulation/modelsim
+w1424709320
+8/home/zachrice/385/385/exp5/ADD_SUB9.sv
+F/home/zachrice/385/385/exp5/ADD_SUB9.sv
+L0 1
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-sv -work work -O0
+Z5 !s92 -sv -work work +incdir+/home/zachrice/385/385/exp5 -O0
+n@a@d@d_@s@u@b9
+!i10b 1
+!s100 aQl?@djo_bf2Z:=m5HOI^0
+!s105 ADD_SUB9_sv_unit
+!s85 0
+!s108 1424823548.414357
+!s107 /home/zachrice/385/385/exp5/ADD_SUB9.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zachrice/385/385/exp5|/home/zachrice/385/385/exp5/ADD_SUB9.sv|
+!s101 -O0
+vcontrol
+R1
+IGoJ?1_5UT9FO>eLjf<?ZU2
+VJaLfKBm=U<15ML=7WTka_1
+S1
+R2
+w1424821059
+8/home/zachrice/385/385/exp5/control.sv
+F/home/zachrice/385/385/exp5/control.sv
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 ClPNX0<U_T9lEh?nGKkXP3
+!s105 control_sv_unit
+!s85 0
+!s108 1424823548.634218
+!s107 /home/zachrice/385/385/exp5/control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zachrice/385/385/exp5|/home/zachrice/385/385/exp5/control.sv|
+!s101 -O0
+vDeeFF
+R1
+IDXC@@`jzBhn`>RjG5Wg?03
+VBFTLjD[`4@@_D@Zn16GbB0
+S1
+R2
+w1424808437
+8/home/zachrice/385/385/exp5/DeeFF.sv
+F/home/zachrice/385/385/exp5/DeeFF.sv
+L0 1
+R3
+r1
+31
+R4
+n@dee@f@f
+R5
+!i10b 1
+!s100 U4@DKEFzBa;^_oMUaP;Ol3
+!s105 DeeFF_sv_unit
+!s85 0
+!s108 1424823547.905919
+!s107 /home/zachrice/385/385/exp5/DeeFF.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zachrice/385/385/exp5|/home/zachrice/385/385/exp5/DeeFF.sv|
+!s101 -O0
+vfull_adder
+R1
+I>>4m3g4bVaMmg5RaKA71T1
+V[T5OE5g>FjJWW79mUzPAY3
+S1
+R2
+w1424638242
+8/home/zachrice/385/385/exp5/full_adder.sv
+F/home/zachrice/385/385/exp5/full_adder.sv
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 oh?_`=?SZib5>48FOAVmL2
+!s105 full_adder_sv_unit
+!s85 0
+!s108 1424823548.189335
+!s107 /home/zachrice/385/385/exp5/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zachrice/385/385/exp5|/home/zachrice/385/385/exp5/full_adder.sv|
+!s101 -O0
+vmy8bitmult
+I3Y384lE>hn4X:@@jU5[eC0
+VhWLeL<iW3l[DUGbOLC]NW2
+R2
+w1424820646
+8/home/zachrice/385/385/exp5/my8bitmult.v
+F/home/zachrice/385/385/exp5/my8bitmult.v
+L0 19
+R3
+r1
+31
+o-vlog01compat -work work -O0
+!i10b 1
+!s100 ko8`O=koMakSfK=eVJ>hm3
+!s85 0
+!s108 1424823547.580571
+!s107 /home/zachrice/385/385/exp5/my8bitmult.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/zachrice/385/385/exp5|/home/zachrice/385/385/exp5/my8bitmult.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+/home/zachrice/385/385/exp5 -O0
+vreg_8
+R1
+I:>Mjj3h65BbmB<K66ODW=1
+V5:D0fhDcSV47Jeeg==^R51
+S1
+R2
+w1424709880
+8/home/zachrice/385/385/exp5/reg_8.sv
+F/home/zachrice/385/385/exp5/reg_8.sv
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 AEbz`oU1a:D@DnDP^KL1?3
+!s105 reg_8_sv_unit
+!s85 0
+!s108 1424823548.526322
+!s107 /home/zachrice/385/385/exp5/reg_8.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zachrice/385/385/exp5|/home/zachrice/385/385/exp5/reg_8.sv|
+!s101 -O0
+vtestbench
+R1
+!i10b 1
+!s100 o?>H90>c`3<9JjcY4dn^_3
+IVn`CY5;:_VWAo^lRcJ<bm2
+VhGfW:390DM[oDMzegDH9`2
+!s105 testbench_sv_unit
+S1
+R2
+w1424823384
+8/home/zachrice/385/385/exp5/testbench.sv
+F/home/zachrice/385/385/exp5/testbench.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1424823548.746300
+!s107 /home/zachrice/385/385/exp5/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/zachrice/385/385/exp5|/home/zachrice/385/385/exp5/testbench.sv|
+!s101 -O0
+R4
+R5

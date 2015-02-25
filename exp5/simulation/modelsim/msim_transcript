@@ -1,0 +1,132 @@
+# do 8bitmult_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/zachrice/385/385/exp5 {/home/zachrice/385/385/exp5/my8bitmult.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module my8bitmult
+# 
+# Top level modules:
+# 	my8bitmult
+# vlog -sv -work work +incdir+/home/zachrice/385/385/exp5 {/home/zachrice/385/385/exp5/DeeFF.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DeeFF
+# 
+# Top level modules:
+# 	DeeFF
+# vlog -sv -work work +incdir+/home/zachrice/385/385/exp5 {/home/zachrice/385/385/exp5/full_adder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# vlog -sv -work work +incdir+/home/zachrice/385/385/exp5 {/home/zachrice/385/385/exp5/ADD_SUB9.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ADD_SUB9
+# 
+# Top level modules:
+# 	ADD_SUB9
+# vlog -sv -work work +incdir+/home/zachrice/385/385/exp5 {/home/zachrice/385/385/exp5/reg_8.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module reg_8
+# 
+# Top level modules:
+# 	reg_8
+# vlog -sv -work work +incdir+/home/zachrice/385/385/exp5 {/home/zachrice/385/385/exp5/control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# vlog -sv -work work +incdir+/home/zachrice/385/385/exp5 {/home/zachrice/385/385/exp5/testbench.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps testbench 
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.my8bitmult
+# Loading work.control
+# Loading work.ADD_SUB9
+# Loading work.full_adder
+# Loading work.reg_8
+# Loading work.DeeFF
+# ** Warning: (vsim-3017) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Too few port connections. Expected 15, found 9.
+#         Region: /testbench/my8bitmult/b2v_inst
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'AhexU'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'AhexL'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'BhexU'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'Aval'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'Bval'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'X'.
+# ** Warning: (vsim-3017) /home/zachrice/385/385/exp5/my8bitmult.v(91): [TFMPC] - Too few port connections. Expected 8, found 7.
+#         Region: /testbench/my8bitmult/b2v_inst10
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(91): [TFMPC] - Missing connection for port 'Data_out'.
+# ** Warning: (vsim-3017) /home/zachrice/385/385/exp5/my8bitmult.v(104): [TFMPC] - Too few port connections. Expected 8, found 5.
+#         Region: /testbench/my8bitmult/b2v_inst2
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(104): [TFMPC] - Missing connection for port 'Shift_In'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(104): [TFMPC] - Missing connection for port 'Shift_En'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(104): [TFMPC] - Missing connection for port 'Shift_Out'.
+# 
+# add wave *
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: zachrice  Hostname: gelib-057-19.ews.illinois.edu  ProcessID: 4475
+#           Attempting to use alternate WLF file "./wlftsF3HGv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftsF3HGv
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1000 ns
+# ** Warning: (vsim-8315) /home/zachrice/385/385/exp5/control.sv(24): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) /home/zachrice/385/385/exp5/control.sv(24): No condition is true in the unique/priority if/case statement.
+load wave.do
+# couldn't load file "wave.do": wave.do: invalid ELF header
+do /home/zachrice/385/385/exp5/simulation/modelsim/wave.do
+restart -f
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.control
+# Loading work.ADD_SUB9
+# Loading work.full_adder
+# Loading work.reg_8
+# Loading work.DeeFF
+# ** Warning: (vsim-3017) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Too few port connections. Expected 15, found 9.
+#         Region: /testbench/my8bitmult/b2v_inst
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'AhexU'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'AhexL'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'BhexU'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'Aval'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'Bval'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(73): [TFMPC] - Missing connection for port 'X'.
+# ** Warning: (vsim-3017) /home/zachrice/385/385/exp5/my8bitmult.v(91): [TFMPC] - Too few port connections. Expected 8, found 7.
+#         Region: /testbench/my8bitmult/b2v_inst10
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(91): [TFMPC] - Missing connection for port 'Data_out'.
+# ** Warning: (vsim-3017) /home/zachrice/385/385/exp5/my8bitmult.v(104): [TFMPC] - Too few port connections. Expected 8, found 5.
+#         Region: /testbench/my8bitmult/b2v_inst2
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(104): [TFMPC] - Missing connection for port 'Shift_In'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(104): [TFMPC] - Missing connection for port 'Shift_En'.
+# ** Warning: (vsim-3722) /home/zachrice/385/385/exp5/my8bitmult.v(104): [TFMPC] - Missing connection for port 'Shift_Out'.
+log -r *
+run 1000ns
+# ** Warning: (vsim-8315) /home/zachrice/385/385/exp5/control.sv(24): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) /home/zachrice/385/385/exp5/control.sv(24): No condition is true in the unique/priority if/case statement.
+# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.

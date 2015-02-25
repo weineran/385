@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 8bitmult
-Mon Feb 23 12:52:24 2015
+Tue Feb 24 18:18:08 2015
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -10,7 +10,20 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |my8bitmult|control:b2v_inst|curr_state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Port Connectivity Checks: "DeeFF:b2v_inst5"
+ 13. Port Connectivity Checks: "reg_8:b2v_inst2"
+ 14. Port Connectivity Checks: "reg_8:b2v_inst10"
+ 15. Port Connectivity Checks: "ADD_SUB9:b2v_inst1|full_adder:FA8"
+ 16. Port Connectivity Checks: "control:b2v_inst"
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +49,20 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Feb 23 12:52:24 2015           ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 24 18:18:08 2015       ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                      ; 8bitmult                                    ;
-; Top-level Entity Name              ; 8bitmult                                    ;
+; Top-level Entity Name              ; my8bitmult                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 13                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -59,7 +72,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; 8bitmult           ; 8bitmult           ;
+; Top-level entity name                                                      ; my8bitmult         ; 8bitmult           ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,19 +170,223 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path              ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------+---------+
+; my8bitmult.v                     ; yes             ; User Verilog HDL File        ; /home/zachrice/385/385/exp5/my8bitmult.v  ;         ;
+; DeeFF.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/zachrice/385/385/exp5/DeeFF.sv      ;         ;
+; full_adder.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/zachrice/385/385/exp5/full_adder.sv ;         ;
+; ADD_SUB9.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/zachrice/385/385/exp5/ADD_SUB9.sv   ;         ;
+; reg_8.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/zachrice/385/385/exp5/reg_8.sv      ;         ;
+; control.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/zachrice/385/385/exp5/control.sv    ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+;                                             ;         ;
+; Total combinational functions               ; 0       ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 0       ;
+;     -- 3 input functions                    ; 0       ;
+;     -- <=2 input functions                  ; 0       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 0       ;
+;     -- arithmetic mode                      ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+;     -- Dedicated logic registers            ; 0       ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 13      ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+; Maximum fan-out node                        ; CLR_LDB ;
+; Maximum fan-out                             ; 1       ;
+; Total fan-out                               ; 13      ;
+; Average fan-out                             ; 0.50    ;
++---------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |my8bitmult                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |my8bitmult         ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |my8bitmult|control:b2v_inst|curr_state                                                                                                                                                                                                        ;
++---------------+--------------+--------------+--------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Name          ; curr_state.P ; curr_state.O ; curr_state.N ; curr_state.M1 ; curr_state.L ; curr_state.K ; curr_state.J ; curr_state.I ; curr_state.H ; curr_state.G ; curr_state.F ; curr_state.E ; curr_state.D ; curr_state.C ; curr_state.B ; curr_state.A ;
++---------------+--------------+--------------+--------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; curr_state.A  ; 0            ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; curr_state.B  ; 0            ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 1            ;
+; curr_state.C  ; 0            ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 1            ;
+; curr_state.D  ; 0            ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 1            ;
+; curr_state.E  ; 0            ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.F  ; 0            ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.G  ; 0            ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.H  ; 0            ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.I  ; 0            ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.J  ; 0            ; 0            ; 0            ; 0             ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.K  ; 0            ; 0            ; 0            ; 0             ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.L  ; 0            ; 0            ; 0            ; 0             ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.M1 ; 0            ; 0            ; 0            ; 1             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.N  ; 0            ; 0            ; 1            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.O  ; 0            ; 1            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.P  ; 1            ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
++---------------+--------------+--------------+--------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; control:b2v_inst|curr_state~4          ; Lost fanout        ;
+; control:b2v_inst|curr_state~5          ; Lost fanout        ;
+; control:b2v_inst|curr_state~6          ; Lost fanout        ;
+; control:b2v_inst|curr_state~7          ; Lost fanout        ;
+; control:b2v_inst|curr_state~8          ; Lost fanout        ;
+; control:b2v_inst|curr_state.A          ; Lost fanout        ;
+; control:b2v_inst|curr_state.B          ; Lost fanout        ;
+; control:b2v_inst|curr_state.C          ; Lost fanout        ;
+; control:b2v_inst|curr_state.D          ; Lost fanout        ;
+; control:b2v_inst|curr_state.E          ; Lost fanout        ;
+; control:b2v_inst|curr_state.F          ; Lost fanout        ;
+; control:b2v_inst|curr_state.G          ; Lost fanout        ;
+; control:b2v_inst|curr_state.H          ; Lost fanout        ;
+; control:b2v_inst|curr_state.I          ; Lost fanout        ;
+; control:b2v_inst|curr_state.J          ; Lost fanout        ;
+; control:b2v_inst|curr_state.K          ; Lost fanout        ;
+; control:b2v_inst|curr_state.L          ; Lost fanout        ;
+; control:b2v_inst|curr_state.M1         ; Lost fanout        ;
+; control:b2v_inst|curr_state.N          ; Lost fanout        ;
+; control:b2v_inst|curr_state.O          ; Lost fanout        ;
+; control:b2v_inst|curr_state.P          ; Lost fanout        ;
+; Total Number of Removed Registers = 21 ;                    ;
++----------------------------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                        ;
++-------------------------------+--------------------+---------------------------------------------------------------+
+; Register name                 ; Reason for Removal ; Registers Removed due to This Register                        ;
++-------------------------------+--------------------+---------------------------------------------------------------+
+; control:b2v_inst|curr_state~4 ; Lost Fanouts       ; control:b2v_inst|curr_state.E, control:b2v_inst|curr_state.G, ;
+;                               ;                    ; control:b2v_inst|curr_state.I, control:b2v_inst|curr_state.K, ;
+;                               ;                    ; control:b2v_inst|curr_state.M1                                ;
+; control:b2v_inst|curr_state~5 ; Lost Fanouts       ; control:b2v_inst|curr_state.F, control:b2v_inst|curr_state.J, ;
+;                               ;                    ; control:b2v_inst|curr_state.N                                 ;
+; control:b2v_inst|curr_state~6 ; Lost Fanouts       ; control:b2v_inst|curr_state.L                                 ;
++-------------------------------+--------------------+---------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "DeeFF:b2v_inst5" ;
++-------+-------+----------+------------------+
+; Port  ; Type  ; Severity ; Details          ;
++-------+-------+----------+------------------+
+; Load  ; Input ; Info     ; Stuck at VCC     ;
+; Reset ; Input ; Info     ; Stuck at GND     ;
++-------+-------+----------+------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_8:b2v_inst2"                                                                                                                                  ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Load      ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
+; Shift_In  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Shift_En  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Shift_Out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_8:b2v_inst10"                                                                                            ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Data_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "ADD_SUB9:b2v_inst1|full_adder:FA8" ;
++------+--------+----------+------------------------------------+
+; Port ; Type   ; Severity ; Details                            ;
++------+--------+----------+------------------------------------+
+; c    ; Output ; Info     ; Explicitly unconnected             ;
++------+--------+----------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "control:b2v_inst"                                                                                         ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; AhexU ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; AhexL ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; BhexU ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; Aval  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; Bval  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; X     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Mon Feb 23 12:52:21 2015
+    Info: Processing started: Tue Feb 24 18:18:04 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8bitmult -c 8bitmult
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file my8bitmult.v
+    Info (12023): Found entity 1: my8bitmult
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench
+Info (12021): Found 1 design units, including 1 entities, in source file DeeFF.sv
+    Info (12023): Found entity 1: DeeFF
 Info (12021): Found 1 design units, including 1 entities, in source file register_unit.sv
     Info (12023): Found entity 1: register_unit
-Warning (12018): Entity "DFF" will be ignored because it conflicts with Quartus II primitive name
-Info (12021): Found 1 design units, including 1 entities, in source file DFF.sv
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
     Info (12023): Found entity 1: full_adder
 Info (12021): Found 1 design units, including 1 entities, in source file ADD_SUB9.sv
@@ -180,23 +397,52 @@ Info (12021): Found 1 design units, including 1 entities, in source file HexDriv
     Info (12023): Found entity 1: HexDriver
 Info (12021): Found 1 design units, including 1 entities, in source file control.sv
     Info (12023): Found entity 1: control
-Info (12021): Found 1 design units, including 1 entities, in source file 8bitmult.bdf
-    Info (12023): Found entity 1: 8bitmult
 Info (12021): Found 2 design units, including 1 entities, in source file mux21.vhd
     Info (12022): Found design unit 1: mux21-SYN
     Info (12023): Found entity 1: mux21
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_mux0.vhd
     Info (12022): Found design unit 1: lpm_mux0-SYN
     Info (12023): Found entity 1: lpm_mux0
-Info (12127): Elaborating entity "8bitmult" for the top level hierarchy
-Error (275021): Illegal wire or bus name "Sliding Switches" of type pin 
-Error (275021): Illegal wire or bus name "Reset S" of type pin 
-Error (275062): Logic function of type DFF and instance "inst" is already defined as a signal name or another logic function
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 4 errors, 1 warning
-    Error: Peak virtual memory: 393 megabytes
-    Error: Processing ended: Mon Feb 23 12:52:24 2015
-    Error: Elapsed time: 00:00:03
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12127): Elaborating entity "my8bitmult" for the top level hierarchy
+Info (12128): Elaborating entity "control" for hierarchy "control:b2v_inst"
+Warning (10272): Verilog HDL Case Statement warning at control.sv(142): case item expression covers a value already covered by a previous case item
+Warning (10272): Verilog HDL Case Statement warning at control.sv(154): case item expression covers a value already covered by a previous case item
+Warning (10034): Output port "AhexU" at control.sv(4) has no driver
+Warning (10034): Output port "AhexL" at control.sv(4) has no driver
+Warning (10034): Output port "BhexU" at control.sv(4) has no driver
+Warning (10034): Output port "Aval" at control.sv(5) has no driver
+Warning (10034): Output port "Bval" at control.sv(5) has no driver
+Warning (10034): Output port "X" at control.sv(6) has no driver
+Info (12128): Elaborating entity "ADD_SUB9" for hierarchy "ADD_SUB9:b2v_inst1"
+Info (12128): Elaborating entity "full_adder" for hierarchy "ADD_SUB9:b2v_inst1|full_adder:FA0"
+Info (12128): Elaborating entity "reg_8" for hierarchy "reg_8:b2v_inst10"
+Info (12128): Elaborating entity "DeeFF" for hierarchy "DeeFF:b2v_inst5"
+Critical Warning (10237): Verilog HDL warning at DeeFF.sv(9): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (17049): 21 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLR_LDB"
+    Warning (15610): No output dependent on input pin "Reset2"
+    Warning (15610): No output dependent on input pin "Switches[0]"
+    Warning (15610): No output dependent on input pin "Switches[1]"
+    Warning (15610): No output dependent on input pin "Switches[2]"
+    Warning (15610): No output dependent on input pin "Switches[3]"
+    Warning (15610): No output dependent on input pin "Switches[4]"
+    Warning (15610): No output dependent on input pin "Switches[5]"
+    Warning (15610): No output dependent on input pin "Switches[6]"
+    Warning (15610): No output dependent on input pin "Switches[7]"
+    Warning (15610): No output dependent on input pin "Run"
+    Warning (15610): No output dependent on input pin "Clk"
+    Warning (15610): No output dependent on input pin "Reset"
+Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 404 megabytes
+    Info: Processing ended: Tue Feb 24 18:18:08 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 

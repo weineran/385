@@ -4,7 +4,7 @@ module control
 	output logic [6:0] AhexU, AhexL, BhexU,
 	output logic [7:0] Aval, Bval,
 	output logic X,
-	output Clr_ld, Shift, Add, Sub
+	output logic Clr_ld, Shift, Add, Sub
 );
 
 enum logic [4:0] {A,B,C,D,E,F,G,H,I,J,K,L,M1,N,O,P} curr_state, next_state;
@@ -20,27 +20,31 @@ always_comb
 begin
 
 	next_state = curr_state;
+	
 	unique case (curr_state)
-		A : if (Run)
+		A : if (~Run)
 			next_state = B;
 		B : next_state = C;
 		C : next_state = D;
 		D : next_state = E;
 		E : next_state = F;
 		F : next_state = G;
+		G : next_state = H;
 		H : next_state = I;
 		I : next_state = J;
+		J : next_state = K;
       K : next_state = L;
       L : next_state = M1;
       M1 : next_state = N;
       N : next_state = O;
       O : next_state = P;
-      P : if(~Run)
-          next_state = A;       		
+      P : if(Run)
+          next_state = A; 
+			 
 	endcase		
 end	
 
-always_comb
+always@(curr_state or ClearA_LoadB or M)
 begin
 	case(curr_state)
 		  A:  begin

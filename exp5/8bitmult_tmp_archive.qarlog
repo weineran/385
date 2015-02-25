@@ -1,0 +1,40 @@
+Quartus II Archive log --	/home/zachrice/385/385/exp5/8bitmult_tmp_archive.qarlog
+
+Archive:	/home/zachrice/385/385/exp5/8bitmult_tmp_archive.qar
+Date:		Mon Feb 23 15:54:39 2015
+Quartus II 32-bit		13.1.4 Build 182 03/12/2014 SJ Full Version
+
+	=========== Files Selected: ===========
+/home/zachrice/385/385/exp5/8bitmult.bdf
+/home/zachrice/385/385/exp5/8bitmult.qpf
+/home/zachrice/385/385/exp5/8bitmult.qsf
+/home/zachrice/385/385/exp5/ADD_SUB9.sv
+/home/zachrice/385/385/exp5/DFF.sv
+/home/zachrice/385/385/exp5/HexDriver.sv
+/home/zachrice/385/385/exp5/control.sv
+/home/zachrice/385/385/exp5/db/8bitmult.cmp.hdb
+/home/zachrice/385/385/exp5/db/8bitmult.db_info
+/home/zachrice/385/385/exp5/full_adder.sv
+/home/zachrice/385/385/exp5/incremental_db/compiled_partitions/8bitmult.db_info
+/home/zachrice/385/385/exp5/lpm_mux0.bsf
+/home/zachrice/385/385/exp5/lpm_mux0.cmp
+/home/zachrice/385/385/exp5/lpm_mux0.qip
+/home/zachrice/385/385/exp5/lpm_mux0.vhd
+/home/zachrice/385/385/exp5/mux21.bsf
+/home/zachrice/385/385/exp5/mux21.cmp
+/home/zachrice/385/385/exp5/mux21.qip
+/home/zachrice/385/385/exp5/mux21.vhd
+/home/zachrice/385/385/exp5/reg_8.sv
+/home/zachrice/385/385/exp5/register_unit.sv
+/home/zachrice/385/385/exp5/testbench.sv
+/software/altera/13.1/quartus/linux/assignment_defaults.qdf
+	======= Total: 23 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon Feb 23 15:54:41 2015
+Source archive file:	/home/zachrice/385/385/exp5/8bitmult_tmp_archive.qar
+Archive was extracted into	/home/zachrice/385/385/exp5_copy/
+		 - successfully.
