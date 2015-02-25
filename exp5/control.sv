@@ -7,7 +7,7 @@ module control
 	output logic Clr_ld, Shift, Add, Sub
 );
 
-enum logic [4:0] {A,B,C,D,E,F,G,H,I,J,K,L,M1,N,O,P} curr_state, next_state;
+enum logic [4:0] {A,B,Shift1,D,Shift2,F,Shift3,H,Shift4,J,Shift5,L,Shift6,N,Shift7,P,Shift8,R} curr_state, next_state;
 always_ff @ (posedge Clk or posedge Reset )
 	begin
 		if (Reset) 				// Asynchronous Reset - see note in Reg_4
@@ -24,21 +24,23 @@ begin
 	unique case (curr_state)
 		A : if (Run)
 			next_state = B;
-		B : next_state = C;
-		C : next_state = D;
-		D : next_state = E;
-		E : next_state = F;
-		F : next_state = G;
-		G : next_state = H;
-		H : next_state = I;
-		I : next_state = J;
-		J : next_state = K;
-      K : next_state = L;
-      L : next_state = M1;
-      M1 : next_state = N;
-      N : next_state = O;
-      O : next_state = P;
-      P : if(~Run)
+		B : next_state = Shift1;
+		Shift1 : next_state = D;
+		D : next_state = Shift2;
+		Shift2 : next_state = F;
+		F : next_state = Shift3;
+		Shift3 : next_state = H;
+		H : next_state = Shift4;
+		Shift4 : next_state = J;
+		J : next_state = Shift5;
+      Shift5 : next_state = L;
+      L : next_state = Shift6;
+      Shift6 : next_state = N;
+      N : next_state = Shift7;
+      Shift7 : next_state = P;
+		P : next_state = Shift8;
+		Shift8 : next_state = R;
+      R : if(~Run)
           next_state = A; 
 			 
 	endcase		
@@ -69,7 +71,7 @@ begin
 				end
 					
 		  // first shift
-		  C:  begin
+		  Shift1:  begin
 				Shift = 1'b1;
 				Add = 1'b0;
 				Sub = 1'b0;
@@ -89,7 +91,7 @@ begin
 				end
 					
 		  // second shift
-		  E:  begin
+		  Shift2:  begin
 			   Shift = 1'b1;
 			   Add = 1'b0;
 			   Sub = 1'b0;
@@ -109,7 +111,7 @@ begin
 				end
 					
         // third shift
-        G:  begin
+        Shift3:  begin
             Shift = 1'b1;
             Add = 1'b0;
             Sub = 1'b0;
@@ -130,7 +132,7 @@ begin
 				end
 					
         // fourth shift
-        I:  begin
+        Shift4:  begin
             Shift = 1'b1;
             Add = 1'b0;
             Sub = 1'b0;
@@ -139,7 +141,7 @@ begin
 					
         
         //5
-        H:  begin
+        J:  begin
             if(M)
                 Add = 1'b1;
 					
@@ -151,7 +153,7 @@ begin
 				end
 					
         // fifth shift
-        I:  begin
+        Shift5:  begin
             Shift = 1'b1;
             Add = 1'b0;
             Sub = 1'b0;
@@ -160,7 +162,7 @@ begin
 					
 
          //6
-        J:  begin
+        L:  begin
             if(M)
                 Add = 1'b1;
 					
@@ -172,7 +174,7 @@ begin
 				end
 					
         // sixth shift
-        K:  begin
+        Shift6:  begin
             Shift = 1'b1;
             Add = 1'b0;
             Sub = 1'b0;
@@ -181,7 +183,7 @@ begin
 					
 
         //7
-        L:  begin
+        N:  begin
             if(M)
                 Add = 1'b1;
             else
@@ -192,7 +194,7 @@ begin
 				end
 					
         // seventh shift
-        M1:  begin
+        Shift7:  begin
             Shift = 1'b1;
             Add = 1'b0;
             Sub = 1'b0;
@@ -201,7 +203,7 @@ begin
 					
         
         //Subtract if necessary
-        N:  begin
+        P:  begin
             if(M)
                 Sub = 1'b1;
             else
@@ -212,7 +214,7 @@ begin
 				end
 					
         // Last shift
-        O:  begin
+        Shift8:  begin
             Add = 1'b0;
             Sub = 1'b0;
             Shift = 1'b1;
@@ -220,7 +222,7 @@ begin
 				end	
 
         // clear
-        P:  begin
+        R:  begin
             Add = 1'b0;
             Sub = 1'b0;
             Shift = 1'b0;

@@ -64,12 +64,12 @@ Switches = 3;	// Specify Din, F, and R
 #50;
 #2 Reset = 0;
 #2 Reset = 1;
-#2 Switches = 4;
-#2 CLR_LDB = 0;	// B = 4
+#2 Switches = 7;
+#2 CLR_LDB = 0;	// B = 7
 #2 CLR_LDB = 1;
-#2 Switches = -2;
+#2 Switches = -59;
 #2 Run = 0;
-#4 Run = 1;		// 4 * -2 = 8
+#4 Run = 1;		// 7 * -59 = -413 = 0xFE63
 
 
 #50;
