@@ -37,31 +37,52 @@ end
 // Everything happens sequentially inside an initial block
 // as in a software program
 initial begin: TEST_VECTORS
-#2 Reset = 0;		// Toggle Rest
-#2 CLR_LDB = 1;
-#2 Run = 1;
-#2 Switches = 8'h33;	// Specify Din, F, and R
+Reset = 0;		// Toggle Rest
+Reset = 1;
+CLR_LDB = 1;
+Run = 1;
+Switches = 3;	// Specify Din, F, and R
 
-#2 Reset = 1;
 #2 Reset = 0;
-#2 CLR_LDB = 0;
+#2 Reset = 1;
+#2 CLR_LDB = 0;	// B = 3
 #2 CLR_LDB = 1;
-#2 Switches = 8'h2;
+#2 Switches = 2;
 #2 Run = 0;
-#4 Run = 1;
+#4 Run = 1;			// 3 * 2 = 6
 
-#25;
-#2 Reset = 1;
+#50;
 #2 Reset = 0;
-#2 Switches = 8'hFF;
-#2 CLR_LDB = 0;
+#2 Reset = 1;
+#2 Switches = -2;
+#2 CLR_LDB = 0;	// B = -2
 #2 CLR_LDB = 1;
-
-#2 Reset = 1;
-#2 Reset = 0;
+#2 Switches = 3;
 #2 Run = 0;
-#4 Run = 1;
-#25;
+#4 Run = 1;		// -2 * 3 = -6
+
+#50;
+#2 Reset = 0;
+#2 Reset = 1;
+#2 Switches = 4;
+#2 CLR_LDB = 0;	// B = 4
+#2 CLR_LDB = 1;
+#2 Switches = -2;
+#2 Run = 0;
+#4 Run = 1;		// 4 * -2 = 8
+
+
+#50;
+#2 Reset = 0;
+#2 Reset = 1;
+#2 Switches = -11;
+#2 CLR_LDB = 0;	// B = 4
+#2 CLR_LDB = 1;
+#2 Switches = -3;
+#2 Run = 0;
+#4 Run = 1;		// -3 * -11 = 33
+
+#50;
 
 
 

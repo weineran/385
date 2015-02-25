@@ -22,7 +22,7 @@ begin
 	next_state = curr_state;
 	
 	unique case (curr_state)
-		A : if (~Run)
+		A : if (Run)
 			next_state = B;
 		B : next_state = C;
 		C : next_state = D;
@@ -38,7 +38,7 @@ begin
       M1 : next_state = N;
       N : next_state = O;
       O : next_state = P;
-      P : if(Run)
+      P : if(~Run)
           next_state = A; 
 			 
 	endcase		

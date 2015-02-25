@@ -47,6 +47,13 @@ wire	SYNTHESIZED_WIRE_9;
 wire	SYNTHESIZED_WIRE_11;
 wire	SYNTHESIZED_WIRE_12;
 
+/* push buttons are active low */
+wire CLR_LDB_h = ~CLR_LDB;
+wire Reset_h = ~Reset;
+wire Run_h = ~Run;
+wire Reset2_h = ~Reset2;
+
+
 assign	SYNTHESIZED_WIRE_7 = 1;
 assign	SYNTHESIZED_WIRE_8 = 1;
 assign	SYNTHESIZED_WIRE_9 = 0;
@@ -57,9 +64,9 @@ assign	SYNTHESIZED_WIRE_9 = 0;
 
 control	b2v_inst(
 	.Clk(Clk),
-	.Reset(Reset),
-	.Run(Run),
-	.ClearA_LoadB(CLR_LDB),
+	.Reset(Reset_h),
+	.Run(Run_h),
+	.ClearA_LoadB(CLR_LDB_h),
 	.M(SYNTHESIZED_WIRE_0),
 	
 	.Clr_ld(SYNTHESIZED_WIRE_14),
@@ -82,7 +89,7 @@ ADD_SUB9	b2v_inst1(
 
 reg_8	b2v_inst10(
 	.Clk(Clk),
-	.Reset(Reset),
+	.Reset(Reset_h),
 	.Shift_In(SYNTHESIZED_WIRE_4),
 	.Load(SYNTHESIZED_WIRE_14),
 	.Shift_En(SYNTHESIZED_WIRE_15),
@@ -95,7 +102,7 @@ reg_8	b2v_inst10(
 
 reg_8	b2v_inst2(
 	.Clk(Clk),
-	.Reset(Reset2),
+	.Reset(Reset2_h),
 	
 	.Load(SYNTHESIZED_WIRE_7),
 	
