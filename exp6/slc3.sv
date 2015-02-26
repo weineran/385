@@ -12,7 +12,8 @@ module slc3
 
 // declare internal signals here
 logic load_ir, load_pc, load_mdr, load_mar;
-logic ce_int, ub_int, lb_int, oe_int, we_int; 
+logic ce_int, ub_int, lb_int, oe_int, we_int;
+logic gatePC, gateMDR; 
 //logic [6:0] HEX0, HEX1, HEX2, HEX3;
 //logic [11:0] LED;
 wire [15:0] Bus_CPU;
@@ -20,7 +21,7 @@ wire [15:0] Bus_MEM;
 wire Reset_h = ~Reset;
 wire Run_h = ~Run;
 wire Continue_h = ~Continue;
-wire [19:0] addr_int;
+wire [15:0] addr_int;	// MIGHT NEED TO CHANGE THIS BACK TO 20 BITS
 
 
 data_path the_data_path
@@ -31,6 +32,7 @@ data_path the_data_path
 
 	// inputs from ISDU (control)
 	.load_ir(load_ir), .load_pc(load_pc), .load_mdr(load_mdr), .load_mar(load_mar),
+	.GatePC(gatePC),.GateMDR(gateMDR),
 	
 	// outputs to FPGA board
 	//.LED(LED),
@@ -56,7 +58,7 @@ ISDU the_ISDU
 	.LD_MAR(load_mar), .LD_MDR(load_mdr), .LD_IR(load_ir),
 	.LD_BEN(), .LD_CC(), .LD_REG(),
 	.LD_PC(load_pc),
-	.GatePC(), .GateMDR(), .GateALU(),
+	.GatePC(gatePC), .GateMDR(gateMDR), .GateALU(),
 	.GateMARMUX(),
 	.PCMUX(), .DRMUX(),
 	.SR1MUX(),
