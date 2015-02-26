@@ -3,10 +3,8 @@ import lc3b_types::*;
 module data_path
 (
 	input logic [15:0] S,
-	input logic Clk, Reset, Run, Continue, load_ir, load_pc, load_mdr,
-	output logic [11:0] LED,
-	output logic [6:0] HEX0, HEX1, HEX2, HEX3,
-	output logic CE, UB, LB, OE, WE,
+	input logic Clk, Reset, Run, Continue, load_ir, load_pc, load_mdr,load_mar,
+	//output logic [11:0] LED,
 	output logic [19:0] ADDR,
 	inout logic [15:0] Data
 );
@@ -45,12 +43,12 @@ adder add_pc
 	.address(pc_in) //address going back into PC
 );
 
-register mar
+register #(.width(20))mar
 (
 	.clk(Clk),
 	.load(load_mar),
-	.in(Data),
-	.out()
+	.in({4'b0000,Data}),
+	.out(ADDR)
 );
 
 tri_buff mdr_buff
