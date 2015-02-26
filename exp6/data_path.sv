@@ -2,7 +2,7 @@ import lc3b_types::*;
 
 module data_path
 (
-	input logic [15:0] S,
+	//input logic [15:0] S,
 	input logic Clk, Reset, Run, Continue, load_ir, load_pc, load_mdr,load_mar,
 	//output logic [11:0] LED,
 	output logic [19:0] ADDR,
@@ -24,7 +24,7 @@ register mdr
 (
 	.clk(Clk),
 	.load(load_mdr),
-	.in(),
+	.in(Data),
 	.out(mdr_out)
 );
 
@@ -36,11 +36,10 @@ register pc
 	.out(pc_out)
 );
 
-adder add_pc
+plus1 add_pc
 (
-	.PC(pc_out),
-	.PCoffset(1'b1),
-	.address(pc_in) //address going back into PC
+	.in(pc_out),
+	.out(pc_in) //address going back into PC
 );
 
 register #(.width(20))mar

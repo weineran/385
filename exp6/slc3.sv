@@ -1,7 +1,7 @@
 module slc3
 (
 	// inputs from user
-	input logic [15:0] S,
+	input logic [15:0] Switches,
 	input logic Clk, Reset, Run, Continue,
 	
 	// outputs to FPGA
@@ -26,7 +26,7 @@ wire [19:0] addr_int;
 data_path the_data_path
 (
 	// inputs from user
-	.S(S),
+	//.S(S),
 	.Clk(Clk), .Reset(Reset_h), .Run(Run_h), .Continue(Continue_h),
 
 	// inputs from ISDU (control)
@@ -47,7 +47,7 @@ ISDU the_ISDU
 	// inputs from user
 	.Clk(Clk), .Reset(Reset_h), .Run(Run_h), .Continue(Continue_h),
 	
-	.ContinueIR(),	// what is this?
+	.ContinueIR(Continue_h),	// what is this?
 	
 	// input from data_path
 	.Opcode(), .IR_5(),
@@ -77,7 +77,7 @@ Mem2IO the_Mem2IO
 	.Clk(Clk), .Reset(Reset_h),
 	.A(addr_int), 
 	.CE(ce_int), .UB(ub_int), .LB(lb_int), .OE(oe_int), .WE(we_int),
-	.Switches(S),
+	.Switches(Switches),
 	.Data_CPU(Bus_CPU), .Data_Mem(Bus_MEM),
 	.HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3) 
 );
