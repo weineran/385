@@ -1,4 +1,6 @@
-/*
+// ISDU.sv (control)
+
+/* 
  * This file is a skeleton of the control unit, performing the instruction fetch and ADD operations. 
  * It is up to you to complete it to implement all the functions required for the processor. In addition, 
  * this entity was created to work with the full LC-3 datapath, and therefore may include signals that 
