@@ -96,13 +96,8 @@ Mem2IO the_Mem2IO
 	.A(addr_int), 
 	.CE(ce_int), .UB(ub_int), .LB(lb_int), .OE(oe_int), .WE(we_int),
 	.Switches(Switches),
-<<<<<<< HEAD
 	.Data_CPU(Bus_CPU), .Data_Mem(Bus_MEM),
 	.HEX0(HEX0_4b), .HEX1(HEX1_4b), .HEX2(HEX2_4b), .HEX3(HEX3_4b) 
-=======
-	.Data_CPU(Bus_CPU), .Data_Mem(Bus_MEM)
-	//.HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3) 
->>>>>>> 15ead3243e86a5fdc417b5fc667f6199e4f2cc33
 );
 
 
@@ -110,17 +105,6 @@ test_memory the_test_memory
 (
 	.Clk(Clk),
 	.Reset(Reset_h), 
-<<<<<<< HEAD
-    .I_O(Bus_MEM),
-    .A(addr_int),
-    .CE(ce_int),
-    .UB(ub_int),
-    .LB(lb_int),
-    .OE(oe_int),
-    .WE(we_int) 
-
-
-=======
    .I_O(Bus_MEM),
    .A(addr_int),
    .CE(ce_int),
@@ -128,7 +112,6 @@ test_memory the_test_memory
    .LB(lb_int),
    .OE(oe_int),
    .WE(we_int) 
->>>>>>> 15ead3243e86a5fdc417b5fc667f6199e4f2cc33
 );
 
 HexDriver hex_driver0
