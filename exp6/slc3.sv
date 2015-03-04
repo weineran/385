@@ -5,7 +5,7 @@ module slc3
 	input logic Clk, Reset, Run, Continue,
 	
 	// outputs to FPGA
-	//output logic [11:0] LED,
+	output logic [11:0] LED,
 	output logic [6:0] HEX0, HEX1, HEX2, HEX3	
 	
 );
@@ -20,7 +20,7 @@ lc3b_aluop ALUK;
 lc3b_opcode opcode;
 logic ir_5;
 
-//logic [6:0] HEX0, HEX1, HEX2, HEX3;
+logic [3:0] HEX0_4b, HEX1_4b, HEX2_4b, HEX3_4b;
 //logic [11:0] LED;
 wire [15:0] Bus_CPU;
 wire [15:0] Bus_MEM;	
@@ -95,22 +95,42 @@ Mem2IO the_Mem2IO
 	.CE(ce_int), .UB(ub_int), .LB(lb_int), .OE(oe_int), .WE(we_int),
 	.Switches(Switches),
 	.Data_CPU(Bus_CPU), .Data_Mem(Bus_MEM),
-	.HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3) 
+	.HEX0(HEX0_4b), .HEX1(HEX1_4b), .HEX2(HEX2_4b), .HEX3(HEX3_4b) 
 );
 
 test_memory the_test_memory
 (
 	.Clk(Clk),
 	.Reset(Reset_h), 
-   .I_O(Bus_MEM),
-   .A(addr_int),
-   .CE(ce_int),
-   .UB(ub_int),
-   .LB(lb_int),
-   .OE(oe_int),
-   .WE(we_int) 
+    .I_O(Bus_MEM),
+    .A(addr_int),
+    .CE(ce_int),
+    .UB(ub_int),
+    .LB(lb_int),
+    .OE(oe_int),
+    .WE(we_int) 
 
 
+);
+
+HexDriver hex_driver0
+(
+	.In0(HEX0_4b), .Out0(HEX0)
+);
+
+HexDriver hex_driver1
+(
+	.In0(HEX1_4b), .Out0(HEX1)
+);
+
+HexDriver hex_driver2
+(
+	.In0(HEX2_4b), .Out0(HEX2)
+);
+
+HexDriver hex_driver3
+(
+	.In0(HEX3_4b), .Out0(HEX3)
 );
 
 
