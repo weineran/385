@@ -1,3 +1,5 @@
+import lc3b_types::*;
+
 // ISDU.sv (control)
 
 /* 
@@ -90,7 +92,7 @@ module ISDU ( 	input	Clk,
             S_33_2 : 
                 Next_state <= S_35;
             S_35 : 
-                Next_state <= PauseIR1;
+                Next_state <= S_32;
             PauseIR1 : 
                 if (~ContinueIR) 
                     Next_state <= PauseIR1;
@@ -190,6 +192,7 @@ module ISDU ( 	input	Clk,
 				begin
 					//	TODO
 				end
+
 
 				
 			default : ;

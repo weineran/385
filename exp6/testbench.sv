@@ -1,3 +1,5 @@
+import lc3b_types::*;
+
 module testbench();
 
 timeunit 10ns;	// Half clock cycle at 50 MHz

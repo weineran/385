@@ -63,14 +63,17 @@ module test_memory ( input 			Clk,
    begin
 		if(Reset)   // Insert initial memory contents here
 		begin
-			mem_array[   0 ] <=    opCLR(R0)                ;  // 16'b0101000000100000	// Clear the register so it can be used as a base
+			/*mem_array[   0 ] <=    opCLR(R0)                ;  // 16'b0101000000100000	// Clear the register so it can be used as a base
 			mem_array[   1 ] <=    opLDR(R1, R0, inSW)      ;  // 16'b0110001000111111	// Load switches
 			mem_array[   2 ] <=    opJMP(R1)                ;  // 16'b1100000001000000	// Jump to the start of a program
 																						// Basic I/O test 1
 			mem_array[   3 ] <=    opLDR(R1, R0, inSW)      ;  // 16'b0110001000111111	// Load switches
 			mem_array[   4 ] <=    opSTR(R1, R0, outHEX)    ;  // 16'b0111001000111111	// Output
 			mem_array[   5 ] <=    opBR(nzp, -3)            ;  // 16'b0000111111111101	// Repeat
-				
+			*/
+			mem_array[   0 ] <=    opADD(R0, R1, R2)               ;  // 16'b0101000000100000	// Clear the register so it can be used as a base
+			
+			
 			for (integer i = 6; i <= size - 1; i = i + 1)		// Assign the rest of the memory to 0
 			begin
 				mem_array[i] <= 16'h0;

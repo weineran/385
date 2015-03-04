@@ -13,7 +13,7 @@ module data_path
 	
 	/* output to memory */
 	//output logic [11:0] LED,
-	output logic [15:0] ADDR,
+	output logic [19:0] ADDR,
 	output lc3b_opcode opcode,
 	inout logic [15:0] Data,
 	
@@ -75,11 +75,11 @@ plus1 add_pc
 	.out(pc_in) //address going back into PC
 );
 
-register #(.width(16))mar
+register #(.width(20))mar
 (
 	.clk(Clk),
 	.load(load_mar),
-	.in({Data}),
+	.in({4'b0000, Data}),
 	.out(ADDR)
 );
 
