@@ -18,8 +18,11 @@ initial
 begin
     for (int i = 0; i < $size(data); i++)
     begin
-        data[i] = 16'b0;
-    end
+        //data[i] = 16'b0;
+		  data[0] = 16'b0;
+		  data[1] = 5;
+		  data[2] = 6;
+	 end
 end
 
 always_ff @(posedge clk)
