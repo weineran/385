@@ -4,12 +4,14 @@ module data_path
 (
 	//input logic [15:0] S,
 	/* inputs from control */
-	input logic Clk, Reset, Run, Continue, load_ir, load_pc, load_mdr,load_mar,
+	input logic Clk, Reset, Run, Continue, load_ir, load_pc, load_mdr,load_mar, 
 	input logic [1:0] pc_sel, 
 	input lc3b_aluop ALUK,
 	input logic GatePC,GateMDR,GateALU,
 	input logic SR2_mux_sel,
 	input logic ld_reg,
+	input logic [1:0] addr2mux_sel,
+	input logic addr1mux_sel,
 	
 	/* output to memory */
 	//output logic [11:0] LED,
@@ -25,19 +27,32 @@ logic [15:0] mdr_out;
 logic [15:0] pc_out;
 logic [15:0] pc_in;
 logic [15:0] pc_mux_out;
-logic [15:0] decode_mux_out;
+lc3b_word addradd_out;
 logic [15:0] ALU_out;
-
 
 lc3b_nzp data_cc;
 lc3b_word SR1_out;
 lc3b_word SR2_out;
 lc3b_word SR2_mux_out;
+
+/* addr2mux inputs and SEXT */
 lc3b_word imm5_sext;
+lc3b_word offset9_sext;
+lc3b_word offset11_sext;
+lc3b_word offset6_sext;
 lc3b_imm5 imm5_out;
+lc3b_offset9 offset9_out; 
+lc3b_offset11 offset11_out; 
+lc3b_offset6 offset6_out;
+/* output for addr2mux */
+lc3b_word addr2mux_out;
+
+/* addr1mux output */
+lc3b_word addr1mux_out;
+
 lc3b_reg dest_out;
 lc3b_reg src1_out;
-lc3b_reg scr2_out;
+lc3b_reg src2_out;
 
 
 ir inst_reg
@@ -50,6 +65,9 @@ ir inst_reg
 	.src2(src2_out),
 	.dest(dest_out),
 	.imm5mux_sel(imm5_sel_out),
+	.offset9(offset9_out),
+	.offset6(offset6_out),
+	.offset11(offset11_out),
 	.opcode(opcode)
 );
 
@@ -108,7 +126,7 @@ mux4 pc_mux
 (
 	.a(Data),
 	.b(pc_in),
-	.c(decode_mux_out), 		// still figuring out preceeding logic for this input
+	.c(addradd_out), 		// still figuring out preceeding logic for this input
 	.d(16'b0000000000000000),
 	.sel(pc_sel),
 	.f(pc_mux_out)
@@ -126,16 +144,65 @@ alu the_alu
 mux2 sr2mux
 (
 	.a(SR2_out),
-	.b(ir_5_sext),
+	.b(imm5_sext),
 	.sel(SR2_mux_sel),
 	.f(SR2_mux_out)
 
 );
 
+// [4:0]
 sext the_sext1
 (
 	.in(imm5_out),
 	.out(imm5_sext)
+);
+
+/* sign extensions for addr2mux */
+// [8:0]
+sext the_sext2
+(
+	.in(offset9_out),
+	.out(offset9_sext)
+);
+
+// [5:0]
+sext the_sext3
+(
+	.in(offset6_out),
+	.out(offset6_sext)
+);
+// [10:0]
+sext the_sext4
+(
+	.in(offset11_out),
+	.out(offset11_sext)
+);
+
+/* addr2mux inputs are from sexts */ 
+mux4 addr2mux
+(
+	.d(offset11_sext),
+	.c(offset9_sext),
+	.b(offset6_sext),
+	.a(16'b0000000000000000),
+	.sel(addr2mux_sel),
+	.f(addr2mux_out)
+);
+
+adder the_adder
+(
+	.PC(addr2mux_out),
+	.PCoffset(addr1mux_out),
+	.address(addradd_out)	
+);
+
+mux2 addr1mux
+(
+	.a(pc_out),
+	.b(SR1_out),
+	.sel(addr1mux_sel),
+	.f(addr1mux_out)
+	
 );
 
 regfile the_regfile
@@ -163,6 +230,9 @@ nzp_comp the_nzp_comp
 	.nzp_instr(dest_out),
 	.should_branch(BEN)
 );
+
+
+
 
 
 
