@@ -50,7 +50,8 @@ ir inst_reg
 	.src2(src2_out),
 	.dest(dest_out),
 	.imm5mux_sel(imm5_sel_out),
-	.opcode(opcode)
+	.opcode(opcode),
+	
 );
 
 register mdr

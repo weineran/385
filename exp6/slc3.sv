@@ -1,8 +1,10 @@
+import lc3b_types::*;
+
 module slc3
 (
 	// inputs from user
 	input logic [15:0] Switches,
-	input logic Clk, Reset, Run, Continue,
+	input logic Clk, Reset, Run, Continue, 
 	
 	// outputs to FPGA
 	output logic [11:0] LED,
@@ -19,15 +21,15 @@ logic [1:0] pc_sel;
 lc3b_aluop ALUK;
 lc3b_opcode opcode;
 logic ir_5;
-
 logic [3:0] HEX0_4b, HEX1_4b, HEX2_4b, HEX3_4b;
+logic BEN;
 //logic [11:0] LED;
 wire [15:0] Bus_CPU;
 wire [15:0] Bus_MEM;	
 wire Reset_h = ~Reset;
 wire Run_h = ~Run;
 wire Continue_h = ~Continue;
-wire [15:0] addr_int;	// MIGHT NEED TO CHANGE THIS BACK TO 20 BITS
+wire [19:0] addr_int;	// MIGHT NEED TO CHANGE THIS BACK TO 20 BITS
 
 
 data_path the_data_path
@@ -53,7 +55,7 @@ data_path the_data_path
 	.ADDR(addr_int),
 	.opcode(opcode),
 	.imm5_sel_out(ir_5),
-	
+	.BEN(BEN),
 	// inout
 	.Data(Bus_CPU)
 );
@@ -66,8 +68,8 @@ ISDU the_ISDU
 	.ContinueIR(Continue_h),	// what is this?
 	
 	// input from data_path
-	.Opcode(opcode), .IR_5(ir_5),
-
+	.Opcode(opcode), .IR_5(ir_5), .BEN(BEN),
+	
 	// output to data_path
 	.LD_MAR(load_mar), .LD_MDR(load_mdr), .LD_IR(load_ir),
 	.LD_BEN(), .LD_CC(), .LD_REG(load_regfile),
@@ -94,14 +96,21 @@ Mem2IO the_Mem2IO
 	.A(addr_int), 
 	.CE(ce_int), .UB(ub_int), .LB(lb_int), .OE(oe_int), .WE(we_int),
 	.Switches(Switches),
+<<<<<<< HEAD
 	.Data_CPU(Bus_CPU), .Data_Mem(Bus_MEM),
 	.HEX0(HEX0_4b), .HEX1(HEX1_4b), .HEX2(HEX2_4b), .HEX3(HEX3_4b) 
+=======
+	.Data_CPU(Bus_CPU), .Data_Mem(Bus_MEM)
+	//.HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3) 
+>>>>>>> 15ead3243e86a5fdc417b5fc667f6199e4f2cc33
 );
+
 
 test_memory the_test_memory
 (
 	.Clk(Clk),
 	.Reset(Reset_h), 
+<<<<<<< HEAD
     .I_O(Bus_MEM),
     .A(addr_int),
     .CE(ce_int),
@@ -111,6 +120,15 @@ test_memory the_test_memory
     .WE(we_int) 
 
 
+=======
+   .I_O(Bus_MEM),
+   .A(addr_int),
+   .CE(ce_int),
+   .UB(ub_int),
+   .LB(lb_int),
+   .OE(oe_int),
+   .WE(we_int) 
+>>>>>>> 15ead3243e86a5fdc417b5fc667f6199e4f2cc33
 );
 
 HexDriver hex_driver0
