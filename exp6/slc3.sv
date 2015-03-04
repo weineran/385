@@ -3,6 +3,7 @@ module slc3
 	// inputs from user
 	input logic [15:0] Switches,
 	input logic Clk, Reset, Run, Continue,
+	input logic BEN
 	
 	// outputs to FPGA
 	//output logic [11:0] LED,
