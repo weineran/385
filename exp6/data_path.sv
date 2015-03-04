@@ -12,7 +12,7 @@ module data_path
 	input logic ld_reg,
 	
 	/* output to memory */
-	//output logic [11:0] LED,
+	output logic [11:0] LED,
 	output logic [19:0] ADDR,
 	output lc3b_opcode opcode,
 	inout logic [15:0] Data,
@@ -33,11 +33,11 @@ lc3b_nzp data_cc;
 lc3b_word SR1_out;
 lc3b_word SR2_out;
 lc3b_word SR2_mux_out;
-lc3b_word imm5_sext;
+lc3b_word imm5_sext, ir_5_sext;
 lc3b_imm5 imm5_out;
 lc3b_reg dest_out;
 lc3b_reg src1_out;
-lc3b_reg scr2_out;
+lc3b_reg src2_out;
 
 
 ir inst_reg
@@ -50,6 +50,7 @@ ir inst_reg
 	.src2(src2_out),
 	.dest(dest_out),
 	.imm5mux_sel(imm5_sel_out),
+	.ledVect12(LED),
 	.opcode(opcode)
 );
 
