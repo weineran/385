@@ -6,5 +6,14 @@ module tri_buff
 	
 );
 
-assign out = (sel) ? in : 16'bZZZZZZZZZZZZZZZZ;
+
+always_comb
+begin
+	if (sel==0)
+		out = 16'bZZZZZZZZZZZZZZZZ;
+	else
+		out = in;
+end
+
+
 endmodule

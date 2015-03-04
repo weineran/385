@@ -140,10 +140,10 @@ module ISDU ( 	input	Clk,
 	    LD_REG = 1'b0;
 	    LD_PC = 1'b0;
 		 
-	    GatePC = 1'b1;
-	    GateMDR = 1'b1;
-	    GateALU = 1'b1;
-	    GateMARMUX = 1'b1;
+	    GatePC = 1'b0;
+	    GateMDR = 1'b0;
+	    GateALU = 1'b0;
+	    GateMARMUX = 1'b0;
 		 
 		 ALUK = alu_add;
 		 
