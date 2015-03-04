@@ -5,8 +5,9 @@ module data_path
 	//input logic [15:0] S,
 	input logic Clk, Reset, Run, Continue, load_ir, load_pc, load_mdr,load_mar,
 	input logic [1:0] pc_sel, 
+	input logic GatePC,GateMDR,
 	//output logic [11:0] LED,
-	output logic [19:0] ADDR,
+	output logic [15:0] ADDR,		// MIGHT NEED TO CHANGE THIS BACK TO 20 BITS
 	inout logic [15:0] Data
 );
 
@@ -46,25 +47,25 @@ plus1 add_pc
 	.out(pc_in) //address going back into PC
 );
 
-register #(.width(20))mar
+register #(.width(16))mar
 (
 	.clk(Clk),
 	.load(load_mar),
-	.in({4'b0000,Data}),
+	.in({Data}),
 	.out(ADDR)
 );
 
 tri_buff mdr_buff
 (
 	.in(mdr_out),
-	.sel(load_mdr),
+	.sel(GateMDR),
 	.out(Data)
 );
 
 tri_buff pc_buff
 (
 	.in(pc_out),
-	.sel(load_pc),
+	.sel(GatePC),
 	.out(Data)
 );
 

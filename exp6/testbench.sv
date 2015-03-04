@@ -46,7 +46,31 @@ Run = 1;
 #2 Reset = 1;
 #2 Run = 0;
 #2 Run = 1;
-#50;
+#20;
+
+#2 Continue = 0;
+#2 Continue = 1;
+#20;
+
+#2 Continue = 0;
+#2 Continue = 1;
+#20;
+
+#2 Continue = 0;
+#2 Continue = 1;
+#20;
+
+#2 Continue = 0;
+#2 Continue = 1;
+#20;
+
+#2 Continue = 0;
+#2 Continue = 1;
+#20;
+
+#2 Continue = 0;
+#2 Continue = 1;
+#20;
 
 
 
