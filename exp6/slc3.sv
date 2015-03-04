@@ -49,7 +49,7 @@ data_path the_data_path
 	
 	
 	// outputs to FPGA board
-	//.LED(LED),
+	.LED(LED),
 
 	// outputs to memory
 	.ADDR(addr_int),

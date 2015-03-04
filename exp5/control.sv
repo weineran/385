@@ -228,6 +228,13 @@ begin
             Shift = 1'b0;
             Clr_ld = 1'b0;
 				end
+			
+			default: begin
+				Add = 1'b0;
+				Sub = 1'b0;
+				Shift = 1'b0;
+				Clr_ld = 1'b0;
+			end
 				
 		 endcase
 		 end

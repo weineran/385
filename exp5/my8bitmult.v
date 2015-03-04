@@ -36,8 +36,9 @@ input wire	[7:0] Switches;
 wire	[8:0] s;
 wire	SYNTHESIZED_WIRE_0;
 wire	SYNTHESIZED_WIRE_1;
-wire	[7:0] SYNTHESIZED_WIRE_2;
+//wire	[7:0] SYNTHESIZED_WIRE_2;
 wire	[7:0] SYNTHESIZED_WIRE_3;
+wire	[7:0] mymux_b, mymux_out;
 wire	SYNTHESIZED_WIRE_4;
 wire	SYNTHESIZED_WIRE_14;
 wire	SYNTHESIZED_WIRE_15;
@@ -79,10 +80,17 @@ control	b2v_inst(
 	
 	);
 
+	
+mux2 mymux
+(
+	.sel(SYNTHESIZED_WIRE_12),
+	.a(8'b00000000), .b(mymux_b),
+	.f(mymux_out)
+);
 
 ADD_SUB9	b2v_inst1(
 	.fn(SYNTHESIZED_WIRE_1),
-	.A(SYNTHESIZED_WIRE_2),
+	.A(mymux_out),
 	.B(SYNTHESIZED_WIRE_3),
 	.S(s));
 
@@ -108,7 +116,7 @@ reg_8	b2v_inst2(
 	
 	.D(Switches),
 	
-	.Data_out(SYNTHESIZED_WIRE_2));
+	.Data_out(mymux_b));
 
 
 

@@ -15,7 +15,8 @@ module ir
     output lc3b_imm4 imm4_out,      // 1.2
     output logic imm5mux_sel,        // AW mp2.1 added
     output logic ir11,               // AW mp2.2 added
-    output logic Abit, Dbit         // 1.2
+    output logic Abit, Dbit,         // 1.2
+    output logic [11:0] ledVect12
 );
 
 lc3b_word data;
@@ -47,6 +48,7 @@ begin
     ir11 = data[11];        // AW mp2.2 added
     Abit = data[5];         // 1.2
     Dbit = data[4];         // 1.2
+    ledVect12 = data[11:0];
 end
 
 endmodule : ir
