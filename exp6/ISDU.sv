@@ -58,7 +58,7 @@ module ISDU ( 	input	Clk,
 				output logic [1:0] 	ADDR2MUX,
 				output logic 		MARMUX,
 				  
-				output logic [1:0] 	ALUK,
+				output lc3b_aluop ALUK,
 				  
 				output logic 		Mem_CE,
 									Mem_UB,
@@ -138,12 +138,12 @@ module ISDU ( 	input	Clk,
 	    LD_REG = 1'b0;
 	    LD_PC = 1'b0;
 		 
-	    GatePC = 1'b0;
-	    GateMDR = 1'b0;
-	    GateALU = 1'b0;
-	    GateMARMUX = 1'b0;
+	    GatePC = 1'b1;
+	    GateMDR = 1'b1;
+	    GateALU = 1'b1;
+	    GateMARMUX = 1'b1;
 		 
-		ALUK = 2'b00;
+		ALUK = alu_add;
 		 
 	    PCMUX = 2'b00;
 	    DRMUX = 2'b00;
@@ -185,7 +185,7 @@ module ISDU ( 	input	Clk,
 				begin 
 					SR2MUX = IR_5;
 					ALUK = alu_add;
-					GateALU = 1'b1;
+					GateALU = 1'b0;
 					LD_REG = 1'b1;
 				end
 			S_02 :

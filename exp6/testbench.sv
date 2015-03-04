@@ -14,7 +14,7 @@ logic Run;
 logic [15:0] Switches = 0; 
 logic Continue = 1;
 
-// logic [11:0] LED;
+logic [11:0] LED;
 logic [6:0] HEX0, HEX1, HEX2, HEX3;	
 
 

@@ -71,7 +71,9 @@ module test_memory ( input 			Clk,
 			mem_array[   4 ] <=    opSTR(R1, R0, outHEX)    ;  // 16'b0111001000111111	// Output
 			mem_array[   5 ] <=    opBR(nzp, -3)            ;  // 16'b0000111111111101	// Repeat
 			*/
-			mem_array[   0 ] <=    opADD(R0, R1, R2)               ;  // test the ADD instruction
+
+			mem_array[   0 ] <=    opADD(R0, R1, R2)               ;  // 16'b0001 000 001 000 010	test the ADD instruction
+
 			
 			
 			for (integer i = 6; i <= size - 1; i = i + 1)		// Assign the rest of the memory to 0
