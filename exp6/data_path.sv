@@ -11,7 +11,7 @@ module data_path
 	input logic SR2_mux_sel,
 	input logic ld_reg,
 	input logic [1:0] addr2mux_sel,
-	input logic addr1mux_sel,
+	input logic addr1mux_sel, dr_mux_sel,
 	
 	/* output to memory */
 	output logic [11:0] LED,
@@ -23,6 +23,7 @@ module data_path
 	output logic BEN,	imm5_sel_out
 );
 
+// internal signals
 logic [15:0] mdr_out;
 logic [15:0] pc_out;
 logic [15:0] pc_in;
@@ -50,7 +51,7 @@ lc3b_word addr2mux_out;
 
 /* addr1mux output */
 lc3b_word addr1mux_out;
-
+lc3b_reg dr_mux_out;
 lc3b_reg dest_out;
 lc3b_reg src1_out;
 lc3b_reg src2_out;
@@ -95,7 +96,7 @@ plus1 add_pc
 	.out(pc_in) //address going back into PC
 );
 
-register #(.width(20))mar
+register #(.width(20)) mar
 (
 	.clk(Clk),
 	.load(load_mar),
@@ -161,20 +162,21 @@ sext the_sext1
 
 /* sign extensions for addr2mux */
 // [8:0]
-sext the_sext2
+sext #(.width(9)) the_sext2
 (
 	.in(offset9_out),
 	.out(offset9_sext)
 );
 
 // [5:0]
-sext the_sext3
+sext #(.width(6)) the_sext3
 (
 	.in(offset6_out),
 	.out(offset6_sext)
 );
+
 // [10:0]
-sext the_sext4
+sext #(.width(11)) the_sext4
 (
 	.in(offset11_out),
 	.out(offset11_sext)
@@ -204,6 +206,15 @@ mux2 addr1mux
 	.b(SR1_out),
 	.sel(addr1mux_sel),
 	.f(addr1mux_out)
+	
+);
+
+mux2 #(.width(3)) dr_mux
+(
+	.a(dest_out),
+	.b(3'b111),
+	.sel(dr_mux_sel),
+	.f(dr_mux_out)
 	
 );
 
