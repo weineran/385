@@ -34,7 +34,7 @@ wire Continue_h = ~Continue;
 wire [19:0] addr_int;	// MIGHT NEED TO CHANGE THIS BACK TO 20 BITS
 
 logic [1:0] addr2_mux_sel;
-logic addr1_mux_sel;
+
 
 data_path the_data_path
 (
@@ -49,7 +49,7 @@ data_path the_data_path
 	.SR2_mux_sel(SR2_mux_sel),
 	.SR1_mux_sel(SR1_mux_sel),
 	.addr2mux_sel(addr2mux_sel),
-	.addr1mux_sel(addr1_mux_sel),
+	.addr1mux_sel(addr1mux_sel),
 	.GateALU(gateALU), .GateMARMUX(gateMARMUX), 
 	.ALUK(ALUK),
 	.pc_sel(pc_sel),

@@ -11,8 +11,8 @@ timeprecision 1ns;
 logic Clk = 0;
 logic Reset;
 logic Run;
-logic [15:0] Switches = 0; 
-logic Continue = 1;
+logic [15:0] Switches = 16'h002a; 
+logic Continue = 0;
 
 logic [11:0] LED;
 logic [6:0] HEX0, HEX1, HEX2, HEX3;	
@@ -50,6 +50,7 @@ Run = 1;
 #2 Run = 1;
 #20;
 
+/*
 #2 Continue = 0;
 #2 Continue = 1;
 #20;
@@ -73,7 +74,7 @@ Run = 1;
 #2 Continue = 0;
 #2 Continue = 1;
 #20;
-
+*/
 
 
 

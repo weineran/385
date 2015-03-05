@@ -69,7 +69,7 @@ module ISDU ( 	input	Clk,
 									Mem_WE
 				);
 
-    enum logic [4:0] {Halted, PauseIR1, PauseIR2, S_18, S_33_1, S_33_2, S_35, S_32, S_01, S_05, S_09, S_02, S_00,
+    enum logic [4:0] {Halted, PauseIR1, PauseIR2, S_18, S_33_1, S_33_2, S_35, S_32, S_01, S_05, S_09, S_02, S_00, S_22,
     					S_16_1, S_16_2, S_13, S_07, S_23, S_12, S_04, S_21, S_06, S_25a, S_25b, S_27}   State, Next_state;   // Internal state logic
 	    
     always_ff @ (posedge Clk or posedge Reset )
@@ -156,6 +156,13 @@ module ISDU ( 	input	Clk,
 			
 			// Branch
 			S_00 :
+				if(BEN == 0)
+					Next_state <= S_18;
+				else
+					Next_state <= S_22;
+			
+			// Branch taken
+			S_22 :
 				Next_state <= S_18;
 
 			// JMP
@@ -283,10 +290,21 @@ module ISDU ( 	input	Clk,
 			// BR
 			S_00 :
 				begin
-					ADDR2MUX = 2'b11;
-					PCMUX = 1;
-					LD_PC = 1'b1;
+					//ADDR2MUX = 2'b11;
+					//PCMUX = 1;
+					//LD_PC = 1'b1;
 				end
+			
+			// BR taken
+			S_22 :
+				// PC <- PC+off9
+				begin
+					ADDR1MUX = 0;	// select PC
+					ADDR2MUX = 2;	// select offset9
+					PCMUX = 2;		// select addradd_out
+					LD_PC = 1;
+				end
+			
 			// PAUSE
 			S_13 :
 				begin
@@ -315,7 +333,7 @@ module ISDU ( 	input	Clk,
 			S_16_2:
 				begin
 					Mem_WE = 1'b0;
-					GateMDR = 1'b0;
+					GateMDR = 1'b1;
 				end
 
 			// JMP

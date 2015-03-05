@@ -166,7 +166,7 @@ mux2 sr2mux
 
 mux2 #(.width(3))sr1mux
 (
-	.a(src2_out),
+	.a(src1_out),
 	.b(dest_out),
 	.sel(SR1_mux_sel),
 	.f(sr1mux_out)
