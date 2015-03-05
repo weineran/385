@@ -7,8 +7,8 @@ module data_path
 	input logic Clk, Reset, Run, Continue, load_ir, load_pc, load_mdr,load_mar, 
 	input logic [1:0] pc_sel, 
 	input lc3b_aluop ALUK,
-	input logic GatePC,GateMDR,GateALU,
-	input logic SR2_mux_sel,
+	input logic GatePC,GateMDR,GateALU, GateMARMUX,
+	input logic SR2_mux_sel,SR1_mux_sel,
 	input logic ld_reg,
 	input logic [1:0] addr2mux_sel,
 	input logic addr1mux_sel,
@@ -54,6 +54,9 @@ lc3b_word addr1mux_out;
 lc3b_reg dest_out;
 lc3b_reg src1_out;
 lc3b_reg src2_out;
+
+/* output of sr1mux */
+lc3b_word sr1mux_out;
 
 
 ir inst_reg
@@ -124,6 +127,14 @@ tri_buff ALU_buff
 	.out(Data)
 );
 
+tri_buff marmux_buff
+(
+	.in(addradd_out),
+	.sel(GateMARMUX),
+	.out(Data)
+);
+
+
 mux4 pc_mux
 (
 	.a(Data),
@@ -151,6 +162,15 @@ mux2 sr2mux
 	.f(SR2_mux_out)
 
 );
+
+mux2 sr1mux
+(
+	.a(src2_out),
+	.b(dest_out),
+	.sel(SR1_mux_sel),
+	.f(sr1mux_out)
+);
+
 
 // [4:0]
 sext the_sext1
@@ -212,7 +232,8 @@ regfile the_regfile
 	.clk(Clk),
 	.in(Data),
 	.load(ld_reg),
-	.src_a(src1_out),
+	.src_a(sr1mux_out),
+	 //.src_a(src1_out),
 	.src_b(src2_out),
 	.dest(dest_out),
 	.reg_a(SR1_out),
