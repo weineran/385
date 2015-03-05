@@ -113,6 +113,8 @@ module ISDU ( 	input	Clk,
 						Next_state <= S_09;
 					op_str :
 						Next_state <= S_16_1;
+					op_pause :
+						Next_state <= PauseIR1;
 					default : 
 					    Next_state <= S_18;
 				endcase
@@ -128,7 +130,6 @@ module ISDU ( 	input	Clk,
 					Next_state <= S_16_2;
 				S_16_2: 
 					Next_state <= S_18;
-						
 			default : ;
 	
 	     endcase
@@ -248,8 +249,8 @@ module ISDU ( 	input	Clk,
 				begin
 					Mem_WE = 1'b0;
 					GateMDR = 1'b0;
-					
 				end
+			
 				
 			default : ;
 		endcase
