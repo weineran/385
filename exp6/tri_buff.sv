@@ -6,7 +6,7 @@ module tri_buff
 );
 
 
-assign out = (sel) ? in : 4'hzzzz;
+assign out = (sel) ? in : 16'hzzzz;
 
 
 endmodule

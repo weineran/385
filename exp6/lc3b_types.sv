@@ -33,7 +33,7 @@ typedef enum bit [3:0] {
     op_lea  = 4'b1110,
     op_not  = 4'b1001,
     op_rti  = 4'b1000,
-    op_shf  = 4'b1101,
+    op_pause = 4'b1101,
     op_stb  = 4'b0011,
     op_sti  = 4'b1011,
     op_str  = 4'b0111,
