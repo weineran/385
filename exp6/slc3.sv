@@ -15,9 +15,9 @@ module slc3
 // declare internal signals here
 logic load_ir, load_pc, load_mdr, load_mar, load_regfile;
 logic ce_int, ub_int, lb_int, oe_int, we_int;
-logic SR2_mux_sel;
+logic SR2_mux_sel, dr_mux_sel, addr1mux_sel;
 logic gatePC, gateMDR, gateALU; 
-logic [1:0] pc_sel;
+logic [1:0] pc_sel, addr2mux_sel;
 lc3b_aluop ALUK;
 lc3b_opcode opcode;
 logic ir_5;
@@ -46,6 +46,7 @@ data_path the_data_path
 	.GateALU(gateALU),
 	.ALUK(ALUK),
 	.pc_sel(pc_sel),
+	.dr_mux_sel(dr_mux_sel), .addr2mux_sel(addr2mux_sel), .addr1mux_sel(addr1mux_sel),
 	
 	
 	// outputs to FPGA board
@@ -79,8 +80,9 @@ ISDU the_ISDU
 	.PCMUX(pc_sel), .DRMUX(),
 	.SR1MUX(),
 	.SR2MUX(SR2_mux_sel),
-	.ADDR1MUX(),
-	.ADDR2MUX(),
+	.dr_mux_sel(dr_mux_sel),
+	.ADDR1MUX(addr1mux_sel),
+	.ADDR2MUX(addr2mux_sel),
 	.MARMUX(),
 	.ALUK(ALUK),
 	.Mem_CE(ce_int),
