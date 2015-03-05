@@ -56,7 +56,7 @@ lc3b_reg src1_out;
 lc3b_reg src2_out;
 
 /* output of sr1mux */
-lc3b_word sr1mux_out;
+lc3b_reg sr1mux_out;
 
 
 ir inst_reg
@@ -95,7 +95,7 @@ register pc
 plus1 add_pc
 (
 	.in(pc_out),
-	.out(pc_in) //address going back into PC
+	.out(pc_in)  //address going back into PC
 );
 
 register #(.width(20))mar
@@ -163,7 +163,7 @@ mux2 sr2mux
 
 );
 
-mux2 sr1mux
+mux2 #(.width(3))sr1mux
 (
 	.a(src2_out),
 	.b(dest_out),
@@ -173,7 +173,7 @@ mux2 sr1mux
 
 
 // [4:0]
-sext the_sext1
+sext #(.width(5)) the_sext1
 (
 	.in(imm5_out),
 	.out(imm5_sext)
@@ -181,20 +181,20 @@ sext the_sext1
 
 /* sign extensions for addr2mux */
 // [8:0]
-sext the_sext2
+sext #(.width(9)) the_sext2
 (
 	.in(offset9_out),
 	.out(offset9_sext)
 );
 
 // [5:0]
-sext the_sext3
+sext #(.width(6)) the_sext3
 (
 	.in(offset6_out),
 	.out(offset6_sext)
 );
 // [10:0]
-sext the_sext4
+sext #(.width(11))the_sext4
 (
 	.in(offset11_out),
 	.out(offset11_sext)

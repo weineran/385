@@ -52,8 +52,9 @@ module ISDU ( 	input	Clk,
 									
 				output logic [1:0] 	PCMUX,
 				                    DRMUX,
-									SR1MUX,
-				output logic 		SR2MUX,
+
+									
+				output logic 		SR2MUX, SR1MUX,
 									ADDR1MUX,
 				output logic [1:0] 	ADDR2MUX,
 				output logic 		MARMUX,
@@ -156,7 +157,7 @@ module ISDU ( 	input	Clk,
 		 
 	    PCMUX = 2'b00;
 	    DRMUX = 2'b00;
-	    SR1MUX = 2'b00;
+	    SR1MUX = 1'b0;
 	    SR2MUX = 1'b0;
 	    ADDR1MUX = 1'b0;
 	    ADDR2MUX = 2'b00;

@@ -16,7 +16,8 @@ module slc3
 logic load_ir, load_pc, load_mdr, load_mar, load_regfile;
 logic ce_int, ub_int, lb_int, oe_int, we_int;
 logic SR2_mux_sel;
-logic gatePC, gateMDR, gateALU; 
+logic SR1_mux_sel;
+logic gatePC, gateMDR, gateALU, gateMARMUX; 
 logic [1:0] pc_sel;
 lc3b_aluop ALUK;
 lc3b_opcode opcode;
@@ -31,6 +32,8 @@ wire Run_h = ~Run;
 wire Continue_h = ~Continue;
 wire [19:0] addr_int;	// MIGHT NEED TO CHANGE THIS BACK TO 20 BITS
 
+logic [1:0] addr2_mux_sel;
+logic addr1_mux_sel;
 
 data_path the_data_path
 (
@@ -43,7 +46,10 @@ data_path the_data_path
 	.GatePC(gatePC),.GateMDR(gateMDR),
 	.ld_reg(load_regfile),
 	.SR2_mux_sel(SR2_mux_sel),
-	.GateALU(gateALU),
+	.SR1_mux_sel(SR1_mux_sel),
+	.addr2mux_sel(addr2_mux_sel),
+	.addr1mux_sel(addr1_mux_sel),
+	.GateALU(gateALU), .GateMARMUX(gateMARMUX), 
 	.ALUK(ALUK),
 	.pc_sel(pc_sel),
 	
@@ -75,12 +81,12 @@ ISDU the_ISDU
 	.LD_BEN(), .LD_CC(), .LD_REG(load_regfile),
 	.LD_PC(load_pc),
 	.GatePC(gatePC), .GateMDR(gateMDR), .GateALU(gateALU),
-	.GateMARMUX(),
+	.GateMARMUX(gateMARMUX),
 	.PCMUX(pc_sel), .DRMUX(),
-	.SR1MUX(),
+	.SR1MUX(SR1_mux_sel),
 	.SR2MUX(SR2_mux_sel),
-	.ADDR1MUX(),
-	.ADDR2MUX(),
+	.ADDR1MUX(addr1_mux_sel),
+	.ADDR2MUX(addr2_mux_sel),
 	.MARMUX(),
 	.ALUK(ALUK),
 	.Mem_CE(ce_int),
