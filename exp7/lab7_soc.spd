@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="lab7_soc/simulation/submodules/altera_reset_controller.v"
+   type="VERILOG"
+   library="rst_controller" />
+ <file
+   path="lab7_soc/simulation/submodules/altera_reset_synchronizer.v"
+   type="VERILOG"
+   library="rst_controller" />
+ <file
+   path="lab7_soc/simulation/submodules/altera_reset_controller.sdc"
+   type="SDC"
+   library="rst_controller" />
+ <file
+   path="lab7_soc/simulation/submodules/lab7_soc_sysid_qsys_0.vo"
+   type="VERILOG"
+   library="sysid_qsys_0" />
+ <file
+   path="lab7_soc/simulation/submodules/lab7_soc_sdram_pll.vo"
+   type="VERILOG"
+   library="sdram_pll" />
+ <file
+   path="lab7_soc/simulation/submodules/lab7_soc_sdram.v"
+   type="VERILOG"
+   library="sdram" />
+ <file
+   path="lab7_soc/simulation/submodules/lab7_soc_led.v"
+   type="VERILOG"
+   library="led" />
+ <file
+   path="lab7_soc/simulation/submodules/lab7_soc_onchip_memory2_0.hex"
+   type="HEX"
+   library="onchip_memory2_0" />
+ <file
+   path="lab7_soc/simulation/submodules/lab7_soc_onchip_memory2_0.v"
+   type="VERILOG"
+   library="onchip_memory2_0" />
+ <file path="lab7_soc/simulation/lab7_soc.v" type="VERILOG" />
+ <topLevel name="lab7_soc" />
+ <deviceFamily name="cycloneive" />
+ <modelMap
+   controllerPath="lab7_soc.onchip_memory2_0"
+   modelPath="lab7_soc.onchip_memory2_0" />
+</simPackage>

@@ -1,0 +1,159 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=/home/zachrice/385/385/exp7/ --output-directory=/home/zachrice/385/385/exp7/lab7_soc/simulation/ --file-set=SIM_VERILOG --report-file=html:/home/zachrice/385/385/exp7/lab7_soc.html --report-file=sopcinfo:/home/zachrice/385/385/exp7/lab7_soc.sopcinfo --report-file=csv:/home/zachrice/385/385/exp7/lab7_soc.csv --report-file=spd:/home/zachrice/385/385/exp7/lab7_soc.spd --report-file=sip:/home/zachrice/385/385/exp7/lab7_soc/simulation/lab7_soc.sip --report-file=cmp:/home/zachrice/385/385/exp7/lab7_soc.cmp --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE115F23C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=/home/zachrice/385/385/exp7/lab7_soc.qsys
+Progress: Loading exp7/lab7_soc.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding led [altera_avalon_pio 13.1]
+Progress: Parameterizing module led
+Progress: Adding sdram [altera_avalon_new_sdram_controller 13.1]
+Progress: Parameterizing module sdram
+Progress: Adding sdram_pll [altpll 13.1]
+Progress: Parameterizing module sdram_pll
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 13.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: lab7_soc.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: lab7_soc.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Warning: lab7_soc.onchip_memory2_0: onchip_memory2_0.s1 must be connected to an Avalon-MM master
+Warning: lab7_soc.led: led.s1 must be connected to an Avalon-MM master
+Warning: lab7_soc.sdram: sdram.s1 must be connected to an Avalon-MM master
+Warning: lab7_soc.sdram_pll: sdram_pll.pll_slave must be connected to an Avalon-MM master
+Warning: lab7_soc.sysid_qsys_0: sysid_qsys_0.control_slave must be connected to an Avalon-MM master
+Warning: lab7_soc.sdram_pll: sdram_pll.areset_conduit must be exported, or connected to a matching conduit.
+Warning: lab7_soc.sdram_pll: sdram_pll.locked_conduit must be exported, or connected to a matching conduit.
+Warning: lab7_soc.sdram_pll: sdram_pll.phasedone_conduit must be exported, or connected to a matching conduit.
+Info: lab7_soc: Generating lab7_soc "lab7_soc" for SIM_VERILOG
+Info: pipeline_bridge_swap_transform: After transform: 6 modules, 10 connections
+Info: No custom instruction connections, skipping transform 
+Info: reset_adaptation_transform: After transform: 9 modules, 18 connections
+Info: onchip_memory2_0: Starting RTL generation for module 'lab7_soc_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec /software/altera/13.1/quartus/linux/perl/bin/perl -I /software/altera/13.1/quartus/linux/perl/lib -I /software/altera/13.1/quartus/sopc_builder/bin/europa -I /software/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /software/altera/13.1/quartus/sopc_builder/bin -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=lab7_soc_onchip_memory2_0 --dir=/tmp/alt6505_479573196722367739.dir/0001_onchip_memory2_0_gen/ --quartus_dir=/software/altera/13.1/quartus --verilog --config=/tmp/alt6505_479573196722367739.dir/0001_onchip_memory2_0_gen//lab7_soc_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6505_479573196722367739.dir/0001_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0: Done RTL generation for module 'lab7_soc_onchip_memory2_0'
+Info: onchip_memory2_0: "lab7_soc" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: led: Starting RTL generation for module 'lab7_soc_led'
+Info: led:   Generation command is [exec /software/altera/13.1/quartus/linux/perl/bin/perl -I /software/altera/13.1/quartus/linux/perl/lib -I /software/altera/13.1/quartus/sopc_builder/bin/europa -I /software/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /software/altera/13.1/quartus/sopc_builder/bin -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=lab7_soc_led --dir=/tmp/alt6505_479573196722367739.dir/0002_led_gen/ --quartus_dir=/software/altera/13.1/quartus --verilog --config=/tmp/alt6505_479573196722367739.dir/0002_led_gen//lab7_soc_led_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6505_479573196722367739.dir/0002_led_gen/  ]
+Info: led: Done RTL generation for module 'lab7_soc_led'
+Info: led: "lab7_soc" instantiated altera_avalon_pio "led"
+Info: sdram: Starting RTL generation for module 'lab7_soc_sdram'
+Info: sdram:   Generation command is [exec /software/altera/13.1/quartus/linux/perl/bin/perl -I /software/altera/13.1/quartus/linux/perl/lib -I /software/altera/13.1/quartus/sopc_builder/bin/europa -I /software/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /software/altera/13.1/quartus/sopc_builder/bin -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=lab7_soc_sdram --dir=/tmp/alt6505_479573196722367739.dir/0003_sdram_gen/ --quartus_dir=/software/altera/13.1/quartus --verilog --config=/tmp/alt6505_479573196722367739.dir/0003_sdram_gen//lab7_soc_sdram_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt6505_479573196722367739.dir/0003_sdram_gen/  ]
+Info: sdram: Done RTL generation for module 'lab7_soc_sdram'
+Info: sdram: "lab7_soc" instantiated altera_avalon_new_sdram_controller "sdram"
+Info: sdram_pll: Generating Verilog simulation model
+Info: sdram_pll: Generated simulation model lab7_soc_sdram_pll.vo
+Info: sdram_pll: "lab7_soc" instantiated altpll "sdram_pll"
+Info: sysid_qsys_0: Generating Verilog simulation model
+Info: sysid_qsys_0: Generated simulation model lab7_soc_sysid_qsys_0.vo
+Info: sysid_qsys_0: "lab7_soc" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: rst_controller: "lab7_soc" instantiated altera_reset_controller "rst_controller"
+Info: lab7_soc: Done "lab7_soc" with 7 modules, 10 files, 90141 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=/home/zachrice/385/385/exp7/lab7_soc.spd --output-directory=/home/zachrice/385/385/exp7/lab7_soc/simulation/
+Info: Doing: ip-make-simscript --spd=/home/zachrice/385/385/exp7/lab7_soc.spd --output-directory=/home/zachrice/385/385/exp7/lab7_soc/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in /home/zachrice/385/385/exp7/lab7_soc/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in /home/zachrice/385/385/exp7/lab7_soc/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in /home/zachrice/385/385/exp7/lab7_soc/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/zachrice/385/385/exp7/lab7_soc/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	6 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/zachrice/385/385/exp7/lab7_soc/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=/home/zachrice/385/385/exp7/ --output-directory=/home/zachrice/385/385/exp7/lab7_soc/ --report-file=bsf:/home/zachrice/385/385/exp7/lab7_soc.bsf --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE115F23C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=/home/zachrice/385/385/exp7/lab7_soc.qsys
+Progress: Loading exp7/lab7_soc.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding led [altera_avalon_pio 13.1]
+Progress: Parameterizing module led
+Progress: Adding sdram [altera_avalon_new_sdram_controller 13.1]
+Progress: Parameterizing module sdram
+Progress: Adding sdram_pll [altpll 13.1]
+Progress: Parameterizing module sdram_pll
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 13.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: lab7_soc.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: lab7_soc.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Warning: lab7_soc.onchip_memory2_0: onchip_memory2_0.s1 must be connected to an Avalon-MM master
+Warning: lab7_soc.led: led.s1 must be connected to an Avalon-MM master
+Warning: lab7_soc.sdram: sdram.s1 must be connected to an Avalon-MM master
+Warning: lab7_soc.sdram_pll: sdram_pll.pll_slave must be connected to an Avalon-MM master
+Warning: lab7_soc.sysid_qsys_0: sysid_qsys_0.control_slave must be connected to an Avalon-MM master
+Warning: lab7_soc.sdram_pll: sdram_pll.areset_conduit must be exported, or connected to a matching conduit.
+Warning: lab7_soc.sdram_pll: sdram_pll.locked_conduit must be exported, or connected to a matching conduit.
+Warning: lab7_soc.sdram_pll: sdram_pll.phasedone_conduit must be exported, or connected to a matching conduit.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=/home/zachrice/385/385/exp7/ --output-directory=/home/zachrice/385/385/exp7/lab7_soc/synthesis/ --file-set=QUARTUS_SYNTH --report-file=html:/home/zachrice/385/385/exp7/lab7_soc.html --report-file=sopcinfo:/home/zachrice/385/385/exp7/lab7_soc.sopcinfo --report-file=cmp:/home/zachrice/385/385/exp7/lab7_soc.cmp --report-file=qip:/home/zachrice/385/385/exp7/lab7_soc/synthesis/lab7_soc.qip --report-file=svd --report-file=regmap:/home/zachrice/385/385/exp7/lab7_soc/synthesis/lab7_soc.regmap --report-file=debuginfo:/home/zachrice/385/385/exp7/lab7_soc/synthesis/lab7_soc.debuginfo --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE115F23C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=/home/zachrice/385/385/exp7/lab7_soc.qsys --language=VERILOG
+Progress: Loading exp7/lab7_soc.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding led [altera_avalon_pio 13.1]
+Progress: Parameterizing module led
+Progress: Adding sdram [altera_avalon_new_sdram_controller 13.1]
+Progress: Parameterizing module sdram
+Progress: Adding sdram_pll [altpll 13.1]
+Progress: Parameterizing module sdram_pll
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 13.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: lab7_soc.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: lab7_soc.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Warning: lab7_soc.onchip_memory2_0: onchip_memory2_0.s1 must be connected to an Avalon-MM master
+Warning: lab7_soc.led: led.s1 must be connected to an Avalon-MM master
+Warning: lab7_soc.sdram: sdram.s1 must be connected to an Avalon-MM master
+Warning: lab7_soc.sdram_pll: sdram_pll.pll_slave must be connected to an Avalon-MM master
+Warning: lab7_soc.sysid_qsys_0: sysid_qsys_0.control_slave must be connected to an Avalon-MM master
+Warning: lab7_soc.sdram_pll: sdram_pll.areset_conduit must be exported, or connected to a matching conduit.
+Warning: lab7_soc.sdram_pll: sdram_pll.locked_conduit must be exported, or connected to a matching conduit.
+Warning: lab7_soc.sdram_pll: sdram_pll.phasedone_conduit must be exported, or connected to a matching conduit.
+Info: lab7_soc: Generating lab7_soc "lab7_soc" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 6 modules, 10 connections
+Info: No custom instruction connections, skipping transform 
+Info: reset_adaptation_transform: After transform: 9 modules, 18 connections
+Info: onchip_memory2_0: Starting RTL generation for module 'lab7_soc_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec /software/altera/13.1/quartus/linux/perl/bin/perl -I /software/altera/13.1/quartus/linux/perl/lib -I /software/altera/13.1/quartus/sopc_builder/bin/europa -I /software/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /software/altera/13.1/quartus/sopc_builder/bin -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=lab7_soc_onchip_memory2_0 --dir=/tmp/alt6505_479573196722367739.dir/0013_onchip_memory2_0_gen/ --quartus_dir=/software/altera/13.1/quartus --verilog --config=/tmp/alt6505_479573196722367739.dir/0013_onchip_memory2_0_gen//lab7_soc_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'lab7_soc_onchip_memory2_0'
+Info: onchip_memory2_0: "lab7_soc" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: led: Starting RTL generation for module 'lab7_soc_led'
+Info: led:   Generation command is [exec /software/altera/13.1/quartus/linux/perl/bin/perl -I /software/altera/13.1/quartus/linux/perl/lib -I /software/altera/13.1/quartus/sopc_builder/bin/europa -I /software/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /software/altera/13.1/quartus/sopc_builder/bin -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=lab7_soc_led --dir=/tmp/alt6505_479573196722367739.dir/0014_led_gen/ --quartus_dir=/software/altera/13.1/quartus --verilog --config=/tmp/alt6505_479573196722367739.dir/0014_led_gen//lab7_soc_led_component_configuration.pl  --do_build_sim=0  ]
+Info: led: Done RTL generation for module 'lab7_soc_led'
+Info: led: "lab7_soc" instantiated altera_avalon_pio "led"
+Info: sdram: Starting RTL generation for module 'lab7_soc_sdram'
+Info: sdram:   Generation command is [exec /software/altera/13.1/quartus/linux/perl/bin/perl -I /software/altera/13.1/quartus/linux/perl/lib -I /software/altera/13.1/quartus/sopc_builder/bin/europa -I /software/altera/13.1/quartus/sopc_builder/bin/perl_lib -I /software/altera/13.1/quartus/sopc_builder/bin -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /software/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=lab7_soc_sdram --dir=/tmp/alt6505_479573196722367739.dir/0015_sdram_gen/ --quartus_dir=/software/altera/13.1/quartus --verilog --config=/tmp/alt6505_479573196722367739.dir/0015_sdram_gen//lab7_soc_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram: Done RTL generation for module 'lab7_soc_sdram'
+Info: sdram: "lab7_soc" instantiated altera_avalon_new_sdram_controller "sdram"
+Info: sdram_pll: "lab7_soc" instantiated altpll "sdram_pll"
+Info: sysid_qsys_0: "lab7_soc" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: rst_controller: "lab7_soc" instantiated altera_reset_controller "rst_controller"
+Info: lab7_soc: Done "lab7_soc" with 7 modules, 10 files, 91241 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
